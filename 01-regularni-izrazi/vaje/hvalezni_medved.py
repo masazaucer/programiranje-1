@@ -25,6 +25,12 @@ medved. Zvrhano zibelko sladkih hrušk mi je prinesel za en sam izdrt trn"."""
 # >>> find_words(test_text, 'de')
 # {'izdere', 'debel', 'oddide', 'začudeno'}
 ###############################################################################
+import re
+
+def find_words(besedilo, podniz):
+    pattern = r"\b\w*" + podniz + r"\w*\b"
+    m = re.findall(pattern, besedilo)
+    return set(m)
 
 
 ###############################################################################
@@ -34,7 +40,10 @@ medved. Zvrhano zibelko sladkih hrušk mi je prinesel za en sam izdrt trn"."""
 # >>> find_prefix(test_text, 'zi')
 # {'zibala', 'zibel', 'zibelko'}
 ###############################################################################
-
+def find_prefix(besedilo, predpona):
+    pattern = r"\b" + predpona + r"\w*\b"
+    m = re.findall(pattern, besedilo)
+    return set(m)
 
 ###############################################################################
 # 3) Sestavite funkcijo [find_suffix], ki vrne množico vseh besed, ki se
@@ -43,7 +52,10 @@ medved. Zvrhano zibelko sladkih hrušk mi je prinesel za en sam izdrt trn"."""
 # >>> find_suffix(test_text, 'la')
 # {'zibala', 'razveselila', 'prestrašila', 'šivala', 'opazila', 'tla'}
 ###############################################################################
-
+def find_suffix(besedilo, pripona):
+    pattern = r"\b\w*" + pripona + r"\b"
+    m = re.findall(pattern, besedilo)
+    return set(m)
 
 ###############################################################################
 # 4) Sestavite funkcijo [double_letters], ki sprejme niz in vrne množico vseh
@@ -52,3 +64,16 @@ medved. Zvrhano zibelko sladkih hrušk mi je prinesel za en sam izdrt trn"."""
 # >>> double_letters('A volunteer is worth twenty pressed men.')
 # {'volunteer', 'pressed'}
 ###############################################################################
+def double_letters(besedilo):
+    pattern = r"\b\w*(\w)\1\w*\b"
+    m = re.finditer(pattern, besedilo)
+    return {
+        i.group(0) for i in m
+    }
+
+def double_letters(besedilo):
+    pattern = r"(\b\w*(\w)\2\w*\b)"
+    m = re.findall(pattern, besedilo)
+    return {
+        g[0] for g in m
+    }

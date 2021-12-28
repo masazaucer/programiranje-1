@@ -21,3 +21,5 @@ _build
 venv
 env
 node_modules
+
+*.json

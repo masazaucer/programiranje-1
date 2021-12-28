@@ -1,0 +1,93 @@
+# Command environment
+
+#
+# Built-in
+#
+export ESY__ROOT_PACKAGE_CONFIG_PATH="C:\Users\masaz\Programiranje1\programiranje-1\package.json"
+export ='C:=C:\Users\masaz\Programiranje1\programiranje-1'
+export ALLUSERSPROFILE='C:\ProgramData'
+export APPDATA='C:\Users\masaz\AppData\Roaming'
+export CHROME_CRASHPAD_PIPE_NAME='\\.\pipe\crashpad_16176_LQOISSSQVPYYEVYY'
+export COMMONPROGRAMFILES='C:\Program Files\Common Files'
+export COMMONPROGRAMFILES(X86)='C:\Program Files (x86)\Common Files'
+export COMMONPROGRAMW6432='C:\Program Files\Common Files'
+export COMPUTERNAME='LAPTOP-V39C3R67'
+export COMSPEC='C:\WINDOWS\system32\cmd.exe'
+export DRIVERDATA='C:\Windows\System32\Drivers\DriverData'
+export HOMEDRIVE='C:'
+export HOMEPATH='\Users\masaz'
+export LOCALAPPDATA='C:\Users\masaz\AppData\Local'
+export LOGONSERVER='\\LAPTOP-V39C3R67'
+export NUMBER_OF_PROCESSORS='8'
+export ONEDRIVE='C:\Users\masaz\OneDrive'
+export ONEDRIVECONSUMER='C:\Users\masaz\OneDrive'
+export ORIGINAL_XDG_CURRENT_DESKTOP='undefined'
+export OS='Windows_NT'
+export PATH='C:\Perl64\bin;C:\Users\masaz\AppData\Roaming\ActiveState\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\MiKTeX\miktex\bin\x64\;C:\Program Files\Wolfram Research\WolframScript\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\masaz\AppData\Local\activestate\cache\bin;C:\Users\masaz\AppData\Local\ActiveState\StateTool\release;C:\Users\masaz\AppData\Local\activestate\bin;C:\Users\masaz\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\masaz\AppData\Local\Programs\Python\Python39\;C:\Users\masaz\AppData\Local\Microsoft\WindowsApps;C:\Users\masaz\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\masaz\AppData\Roaming\npm'
+export PATHEXT='.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PL;.WPL;.CPL'
+export PATH_ORIGINAL='C:\Users\masaz\AppData\Roaming\ActiveState\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\'
+export PROCESSOR_ARCHITECTURE='AMD64'
+export PROCESSOR_IDENTIFIER='AMD64 Family 23 Model 96 Stepping 1, AuthenticAMD'
+export PROCESSOR_LEVEL='23'
+export PROCESSOR_REVISION='6001'
+export PROGRAMDATA='C:\ProgramData'
+export PROGRAMFILES='C:\Program Files'
+export PROGRAMFILES(X86)='C:\Program Files (x86)'
+export PROGRAMW6432='C:\Program Files'
+export PSMODULEPATH='C:\Users\masaz\Documents\WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules'
+export PUBLIC='C:\Users\Public'
+export SESSIONNAME='Console'
+export SYSTEMDRIVE='C:'
+export SYSTEMROOT='C:\WINDOWS'
+export TEMP='C:\Users\masaz\AppData\Local\Temp'
+export TMP='C:\Users\masaz\AppData\Local\Temp'
+export USERDOMAIN='LAPTOP-V39C3R67'
+export USERDOMAIN_ROAMINGPROFILE='LAPTOP-V39C3R67'
+export USERNAME='masaz'
+export USERPROFILE='C:\Users\masaz'
+export WINDIR='C:\WINDOWS'
+export TERM_PROGRAM='vscode'
+export TERM_PROGRAM_VERSION='1.60.2'
+export LANG='en_GB.UTF-8'
+export COLORTERM='truecolor'
+export VSCODE_GIT_IPC_HANDLE='\\.\pipe\vscode-git-77b1a975a9-sock'
+export GIT_ASKPASS='c:\Users\masaz\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\askpass.sh'
+export VSCODE_GIT_ASKPASS_NODE='C:\Users\masaz\AppData\Local\Programs\Microsoft VS Code\Code.exe'
+export VSCODE_GIT_ASKPASS_MAIN='c:\Users\masaz\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\askpass-main.js'
+export PATH="C:\Users\masaz\Programiranje1\programiranje-1\_esy\default\bin;$PATH"
+export cur__etc="C:/Users/masaz/Programiranje1/programiranje-1/_esy/default/store/i/programiranje_1-dadab200/etc"
+export cur__share="C:/Users/masaz/Programiranje1/programiranje-1/_esy/default/store/i/programiranje_1-dadab200/share"
+export cur__toplevel="C:/Users/masaz/Programiranje1/programiranje-1/_esy/default/store/i/programiranje_1-dadab200/toplevel"
+export cur__stublibs="C:/Users/masaz/Programiranje1/programiranje-1/_esy/default/store/i/programiranje_1-dadab200/stublibs"
+export cur__doc="C:/Users/masaz/Programiranje1/programiranje-1/_esy/default/store/i/programiranje_1-dadab200/doc"
+export cur__man="C:/Users/masaz/Programiranje1/programiranje-1/_esy/default/store/i/programiranje_1-dadab200/man"
+export cur__lib="C:/Users/masaz/Programiranje1/programiranje-1/_esy/default/store/i/programiranje_1-dadab200/lib"
+export cur__sbin="C:/Users/masaz/Programiranje1/programiranje-1/_esy/default/store/i/programiranje_1-dadab200/sbin"
+export cur__bin="C:/Users/masaz/Programiranje1/programiranje-1/_esy/default/store/i/programiranje_1-dadab200/bin"
+export cur__install="C:/Users/masaz/Programiranje1/programiranje-1/_esy/default/store/i/programiranje_1-dadab200"
+export cur__target_dir="C:/Users/masaz/Programiranje1/programiranje-1/_esy/default/store/b/programiranje_1-dadab200"
+export cur__original_root="C:/Users/masaz/Programiranje1/programiranje-1"
+export cur__root="C:/Users/masaz/Programiranje1/programiranje-1"
+export cur__dev="true"
+export cur__version="link-dev:./package.json"
+export cur__name="programiranje-1"
+
+#
+# ocaml@4.11.0@d41d8cd9
+#
+export CAML_LD_LIBRARY_PATH="C:/Users/masaz/.esy/3________________________________________________________________/i/ocaml-4.11.0-72196940/lib/ocaml/stublibs;C:/Users/masaz/.esy/3________________________________________________________________/i/ocaml-4.11.0-72196940/lib/ocaml;$CAML_LD_LIBRARY_PATH"
+export OCAMLLIB="C:/Users/masaz/.esy/3________________________________________________________________/i/ocaml-4.11.0-72196940/lib/ocaml"
+export OCAML_TOPLEVEL_PATH="C:/Users/masaz/.esy/3________________________________________________________________/i/ocaml-4.11.0-72196940/lib/ocaml"
+export OCAMLPATH="C:/Users/masaz/.esy/3________________________________________________________________/i/ocaml-4.11.0-72196940/lib;$OCAMLPATH"
+export MAN_PATH="C:/Users/masaz/.esy/3________________________________________________________________/i/ocaml-4.11.0-72196940/man;$MAN_PATH"
+export PATH="C:/Users/masaz/.esy/3________________________________________________________________/i/ocaml-4.11.0-72196940/bin;$PATH"
+
+#
+# Built-in
+#
+export OCAMLFIND_LDCONF="ignore"
+export OCAMLFIND_DESTDIR="C:/Users/masaz/Programiranje1/programiranje-1/_esy/default/store/i/programiranje_1-dadab200/lib"
+export DUNE_BUILD_DIR="C:/Users/masaz/Programiranje1/programiranje-1/_esy/default/store/b/programiranje_1-dadab200"
+export DUNE_STORE_ORIG_SOURCE_DIR="true"
+export SHELL="env -i /bin/bash --norc --noprofile"
+export PATH="$PATH;/usr/local/bin;/usr/bin;/bin;/usr/sbin;/sbin;C:/WINDOWS/System32"

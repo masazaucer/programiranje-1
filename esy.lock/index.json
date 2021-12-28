@@ -1,0 +1,33 @@
+{
+  "checksum": "43a748d0cf1802f08862fdbfeb3d9608",
+  "root": "programiranje-1@link-dev:./package.json",
+  "node": {
+    "programiranje-1@link-dev:./package.json": {
+      "id": "programiranje-1@link-dev:./package.json",
+      "name": "programiranje-1",
+      "version": "link-dev:./package.json",
+      "source": {
+        "type": "link-dev",
+        "path": ".",
+        "manifest": "package.json"
+      },
+      "overrides": [],
+      "dependencies": [ "ocaml@4.11.0@d41d8cd9" ],
+      "devDependencies": []
+    },
+    "ocaml@4.11.0@d41d8cd9": {
+      "id": "ocaml@4.11.0@d41d8cd9",
+      "name": "ocaml",
+      "version": "4.11.0",
+      "source": {
+        "type": "install",
+        "source": [
+          "archive:https://registry.npmjs.org/ocaml/-/ocaml-4.11.0.tgz#sha1:cf2b920e8a82b7f51fe4b378fac1f0982e701546"
+        ]
+      },
+      "overrides": [],
+      "dependencies": [],
+      "devDependencies": []
+    }
+  }
+}

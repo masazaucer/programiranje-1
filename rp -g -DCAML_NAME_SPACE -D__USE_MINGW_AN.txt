@@ -1,0 +1,597 @@
+rp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -DBOOTSTRAPPING_FLEXLINK -I"../flexdll" -DCAMLDLLIMPORT=  -o eventlog.b.o eventlog.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -DBOOTSTRAPPING_FLEXLINK -I"../flexdll" -DCAMLDLLIMPORT=  -o floats.b.o 
+floats.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -DBOOTSTRAPPING_FLEXLINK -I"../flexdll" -DCAMLDLLIMPORT=  -o str.b.o str.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -DBOOTSTRAPPING_FLEXLINK -I"../flexdll" -DCAMLDLLIMPORT=  -o array.b.o array.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -DBOOTSTRAPPING_FLEXLINK -I"../flexdll" -DCAMLDLLIMPORT=  -o io.b.o io.c    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -DBOOTSTRAPPING_FLEXLINK -I"../flexdll" -DCAMLDLLIMPORT=  -o extern.b.o 
+extern.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -DBOOTSTRAPPING_FLEXLINK -I"../flexdll" -DCAMLDLLIMPORT=  -o intern.b.o 
+intern.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -DBOOTSTRAPPING_FLEXLINK -I"../flexdll" -DCAMLDLLIMPORT=  -o hash.b.o hash.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -DBOOTSTRAPPING_FLEXLINK -I"../flexdll" -DCAMLDLLIMPORT=  -o sys.b.o sys.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -DBOOTSTRAPPING_FLEXLINK -I"../flexdll" -DCAMLDLLIMPORT=  -o meta.b.o meta.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -DBOOTSTRAPPING_FLEXLINK -I"../flexdll" -DCAMLDLLIMPORT=  -o parsing.b.o parsing.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -DBOOTSTRAPPING_FLEXLINK -I"../flexdll" -DCAMLDLLIMPORT=  -o gc_ctrl.b.o gc_ctrl.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -DBOOTSTRAPPING_FLEXLINK -I"../flexdll" -DCAMLDLLIMPORT=  -o md5.b.o md5.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -DBOOTSTRAPPING_FLEXLINK -I"../flexdll" -DCAMLDLLIMPORT=  -o obj.b.o obj.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -DBOOTSTRAPPING_FLEXLINK -I"../flexdll" -DCAMLDLLIMPORT=  -o lexing.b.o 
+lexing.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -DBOOTSTRAPPING_FLEXLINK -I"../flexdll" -DCAMLDLLIMPORT=  -o callback.b.o callback.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -DBOOTSTRAPPING_FLEXLINK -I"../flexdll" -DCAMLDLLIMPORT=  -o debugger.b.o debugger.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -DBOOTSTRAPPING_FLEXLINK -I"../flexdll" -DCAMLDLLIMPORT=  -o weak.b.o weak.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -DBOOTSTRAPPING_FLEXLINK -I"../flexdll" -DCAMLDLLIMPORT=  -o compact.b.o compact.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -DBOOTSTRAPPING_FLEXLINK -I"../flexdll" -DCAMLDLLIMPORT=  -o finalise.b.o finalise.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -DBOOTSTRAPPING_FLEXLINK -I"../flexdll" -DCAMLDLLIMPORT=  -o custom.b.o 
+custom.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -DBOOTSTRAPPING_FLEXLINK -I"../flexdll" -DCAMLDLLIMPORT= -DOCAML_STDLIB_DIR='L"C:/Users/masaz/.esy/3________________________________________________________________/s/ocaml-4.12.0-a9c9b989/lib/ocaml"'  -o dynlink.b.o dynlink.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -DBOOTSTRAPPING_FLEXLINK -I"../flexdll" -DCAMLDLLIMPORT=  -o afl.b.o afl.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -DBOOTSTRAPPING_FLEXLINK -I"../flexdll" -DCAMLDLLIMPORT=  -o win32.b.o win32.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -DBOOTSTRAPPING_FLEXLINK -I"../flexdll" -DCAMLDLLIMPORT=  -o bigarray.b.o bigarray.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -DBOOTSTRAPPING_FLEXLINK -I"../flexdll" -DCAMLDLLIMPORT=  -o main.b.o main.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -DBOOTSTRAPPING_FLEXLINK -I"../flexdll" -DCAMLDLLIMPORT=  -o memprof.b.o memprof.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -DBOOTSTRAPPING_FLEXLINK -I"../flexdll" -DCAMLDLLIMPORT=  -o domain.b.o 
+domain.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -DBOOTSTRAPPING_FLEXLINK -I"../flexdll" -DCAMLDLLIMPORT=  -o skiplist.b.o skiplist.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -DBOOTSTRAPPING_FLEXLINK -I"../flexdll" -DCAMLDLLIMPORT=  -o codefrag.b.o codefrag.c
+    rm -f libcamlrun.a && x86_64-w64-mingw32-ar rc libcamlrun.a  interp.b.o misc.b.o stacks.b.o fix_code.b.o startup_aux.b.o startup_byt.b.o freelist.b.o major_gc.b.o minor_gc.b.o memory.b.o alloc.b.o roots_byt.b.o globroots.b.o fail_byt.b.o signals.b.o signals_byt.b.o printexc.b.o backtrace_byt.b.o backtrace.b.o compare.b.o ints.b.o eventlog.b.o floats.b.o str.b.o array.b.o io.b.o extern.b.o intern.b.o hash.b.o sys.b.o meta.b.o parsing.b.o gc_ctrl.b.o md5.b.o obj.b.o lexing.b.o callback.b.o debugger.b.o weak.b.o compact.b.o finalise.b.o custom.b.o dynlink.b.o afl.b.o win32.b.o bigarray.b.o main.b.o memprof.b.o domain.b.o skiplist.b.o codefrag.b.o && x86_64-w64-mingw32-ranlib libcamlrun.a
+    x86_64-w64-mingw32-gcc -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp 
+-g  -municode -o ocamlrun.exe prims.o libcamlrun.a -lws2_32 -lversion
+    make[1]: Leaving directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/runtime'
+    cp runtime/ocamlrun.exe boot/ocamlrun.exe
+    make -C stdlib \
+                    COMPILER="../boot/ocamlc -use-prims ../runtime/primitives" \
+                    stdlib.cma std_exit.cmo camlheader
+    make[1]: Entering directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/stdlib'
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats  -nopervasives -c camlinternalFormatBasics.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats  -nopervasives -c camlinternalFormatBasics.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats  -nopervasives -c camlinternalAtomic.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats  -nopervasives -c camlinternalAtomic.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats  -nopervasives -no-alias-deps -w -49  -pp "$AWK -f ./expand_module_aliases.awk" -c stdlib.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats  -nopervasives -no-alias-deps -w -49  -pp "$AWK -f ./expand_module_aliases.awk" -c stdlib.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__pervasives.cmo -c pervasives.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__seq.cmi -c seq.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__seq.cmo -c seq.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__option.cmi -c option.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__option.cmo -c option.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__either.cmi -c either.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__either.cmo -c either.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__result.cmi -c result.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__result.cmo -c result.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__bool.cmi -c bool.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__bool.cmo -c bool.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__char.cmi -c char.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__char.cmo -c char.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__uchar.cmi -c uchar.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__uchar.cmo -c uchar.ml
+    sed -e "s|%%VERSION%%|`sed -e 1q ../VERSION | tr -d '\r'`|" sys.mlp > sys.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__sys.cmi -c sys.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__sys.cmo -c sys.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__list.cmi -c list.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__list.cmo -c list.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__bytes.cmi -c bytes.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__bytes.cmo -c bytes.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__string.cmi -c string.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__string.cmo -c string.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__unit.cmi -c unit.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__unit.cmo -c unit.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__marshal.cmi -c marshal.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__marshal.cmo -c marshal.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__nativeint.cmi -c nativeint.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__int32.cmi -c int32.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__obj.cmi -c obj.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__obj.cmo -c obj.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__array.cmi -c array.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__array.cmo -c array.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__float.cmi -c float.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats  -nolabels -no-alias-deps -o stdlib__float.cmo -c float.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__int.cmi -c int.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__int.cmo -c int.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__int32.cmo -c int32.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__int64.cmi -c int64.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__int64.cmo -c int64.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__nativeint.cmo -c nativeint.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__lexing.cmi -c lexing.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__lexing.cmo -c lexing.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__parsing.cmi -c parsing.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__parsing.cmo -c parsing.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__set.cmi -c set.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__set.cmo -c set.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__map.cmi -c map.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__map.cmo -c map.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__stack.cmi -c stack.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__stack.cmo -c stack.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__queue.cmi -c queue.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__queue.cmo -c queue.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -c camlinternalLazy.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -c camlinternalLazy.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__lazy.cmi -c lazy.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__lazy.cmo -c lazy.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__stream.cmi -c stream.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__stream.cmo -c stream.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats  -w A -o stdlib__buffer.cmi -c buffer.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats  -w A -o stdlib__buffer.cmo -c buffer.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats  -w Ae -c camlinternalFormat.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats  -w Ae -c camlinternalFormat.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats  -w Ae -o stdlib__printf.cmi -c printf.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats  -w Ae -o stdlib__printf.cmo -c printf.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__arg.cmi -c arg.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__arg.cmo -c arg.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__atomic.cmi -c atomic.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__atomic.cmo -c atomic.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__printexc.cmi -c printexc.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__printexc.cmo -c printexc.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__fun.cmi -c fun.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__fun.cmo -c fun.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__gc.cmi -c gc.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__gc.cmo -c gc.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__digest.cmi -c digest.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__digest.cmo -c digest.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__random.cmi -c random.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__random.cmo -c random.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__hashtbl.cmi -c hashtbl.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__hashtbl.cmo -c hashtbl.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__weak.cmi -c weak.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__weak.cmo -c weak.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats  -w Ae -o stdlib__format.cmi -c format.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats  -w Ae -o stdlib__format.cmo -c format.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats  -w Ae -o stdlib__scanf.cmi -c scanf.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats  -w Ae -o stdlib__scanf.cmo -c scanf.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__callback.cmi -c callback.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__callback.cmo -c callback.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -c camlinternalOO.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -c camlinternalOO.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats  -no-principal -o stdlib__oo.cmi -c oo.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__oo.cmo -c oo.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -c camlinternalMod.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -c camlinternalMod.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__genlex.cmi -c genlex.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__genlex.cmo -c genlex.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__ephemeron.cmi -c ephemeron.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__ephemeron.cmo -c ephemeron.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__filename.cmi -c filename.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__filename.cmo -c filename.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__complex.cmi -c complex.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__complex.cmo -c complex.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats  -pp "$AWK -f ./expand_module_aliases.awk" -o stdlib__arrayLabels.cmi -c arrayLabels.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats  -nolabels -no-alias-deps -o stdlib__arrayLabels.cmo -c arrayLabels.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats  -pp "$AWK -f ./expand_module_aliases.awk" -o stdlib__listLabels.cmi -c listLabels.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats  -nolabels -no-alias-deps -o stdlib__listLabels.cmo -c listLabels.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats  -pp "$AWK -f ./expand_module_aliases.awk" -o stdlib__bytesLabels.cmi -c bytesLabels.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats  -nolabels -no-alias-deps -o stdlib__bytesLabels.cmo -c bytesLabels.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats  -pp "$AWK -f ./expand_module_aliases.awk" -o stdlib__stringLabels.cmi -c stringLabels.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats  -nolabels -no-alias-deps -o stdlib__stringLabels.cmo -c stringLabels.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats  -pp "$AWK -f ./expand_module_aliases.awk" -o stdlib__moreLabels.cmi -c moreLabels.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats  -nolabels -no-alias-deps -o stdlib__moreLabels.cmo -c moreLabels.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats  -pp "$AWK -f ./expand_module_aliases.awk" -o stdlib__stdLabels.cmi -c stdLabels.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats  -nolabels -no-alias-deps -o stdlib__stdLabels.cmo -c stdLabels.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__bigarray.cmi -c bigarray.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -o stdlib__bigarray.cmo -c bigarray.ml
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -a -o stdlib.cma camlinternalFormatBasics.cmo camlinternalAtomic.cmo stdlib.cmo stdlib__pervasives.cmo stdlib__seq.cmo stdlib__option.cmo stdlib__either.cmo stdlib__result.cmo stdlib__bool.cmo stdlib__char.cmo stdlib__uchar.cmo stdlib__sys.cmo stdlib__list.cmo stdlib__bytes.cmo stdlib__string.cmo stdlib__unit.cmo stdlib__marshal.cmo stdlib__obj.cmo stdlib__array.cmo stdlib__float.cmo stdlib__int.cmo stdlib__int32.cmo stdlib__int64.cmo stdlib__nativeint.cmo stdlib__lexing.cmo stdlib__parsing.cmo stdlib__set.cmo stdlib__map.cmo stdlib__stack.cmo stdlib__queue.cmo camlinternalLazy.cmo stdlib__lazy.cmo stdlib__stream.cmo stdlib__buffer.cmo camlinternalFormat.cmo stdlib__printf.cmo stdlib__arg.cmo stdlib__atomic.cmo stdlib__printexc.cmo stdlib__fun.cmo stdlib__gc.cmo stdlib__digest.cmo stdlib__random.cmo stdlib__hashtbl.cmo stdlib__weak.cmo stdlib__format.cmo stdlib__scanf.cmo stdlib__callback.cmo camlinternalOO.cmo stdlib__oo.cmo camlinternalMod.cmo stdlib__genlex.cmo stdlib__ephemeron.cmo stdlib__filename.cmo stdlib__complex.cmo stdlib__arrayLabels.cmo stdlib__listLabels.cmo stdlib__bytesLabels.cmo stdlib__stringLabels.cmo stdlib__moreLabels.cmo stdlib__stdLabels.cmo stdlib__bigarray.cmo
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats   -c std_exit.ml
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I../runtime -DRUNTIME_NAME='"ocamlrun"'  \
+      -o headernt.o headernt.c
+    x86_64-w64-mingw32-gcc -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp 
+ -municode -o tmpheader.exe headernt.o
+    rm -f camlheader.exe
+    mv tmpheader.exe camlheader
+    rm headernt.o
+    make[1]: Leaving directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/stdlib'
+    cd stdlib && cp stdlib.cma std_exit.cmo *.cmi camlheader ../boot/
+    make -C flexdll MSVC_DETECT=0 OCAML_CONFIG_FILE=../Makefile.config \
+      CHAINS=mingw64 NATDYNLINK=false \
+      OCAMLOPT="../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -nostdlib -I ../boot" \
+      flexlink.exe
+    make[1]: Entering directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/flexdll'
+    bash ./findwinsdk x86 > Makefile.winsdk
+    bash ./findwinsdk x64 64 >> Makefile.winsdk
+    echo "let version = \"0.37\"" > version.ml
+    echo "let mingw_prefix = \"i686-w64-mingw32-\"" >> version.ml
+    echo "let mingw64_prefix = \"x86_64-w64-mingw32-\"" >> version.ml
+    rm -f COMPILER-*
+    touch COMPILER-4120
+    cat COMPILER-4120 > Compat.ml
+    x86_64-w64-mingw32-windres version.rc version_res.o
+    Building flexlink.exe with TOOLCHAIN=mingw for OCaml 4120
+    rm -f flexlink.exe
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -nostdlib -I ../boot -o flexlink.exe -cclib "version_res.o" version.ml Compat.ml coff.ml cmdline.ml create_dll.ml reloc.ml
+    File "reloc.ml", line 502, characters 26-44:
+    502 |   let exports = List.sort Pervasives.compare exports in
+                                    ^^^^^^^^^^^^^^^^^^
+    Alert deprecated: module Stdlib.Pervasives
+    Use Stdlib instead.
+
+    If you need to stay compatible with OCaml < 4.07, you can use the
+    stdlib-shims library: https://github.com/ocaml/stdlib-shims
+    make[1]: Leaving directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/flexdll'
+    make -C runtime clean
+    make[1]: Entering directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/runtime'
+    rm -f *.o *.obj *.a *.lib *.so *.dll ld.conf
+    rm -f ocamlrun ocamlrund ocamlruni
+    rm -f ocamlrun.exe ocamlrund.exe ocamlruni.exe
+    rm -f primitives primitives.new prims.c caml/opnames.h caml/version.h caml/jumptbl.h
+    rm -f domain_state*.inc
+    rm -rf .dep
+    make[1]: Leaving directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/runtime'
+    make partialclean
+    make[1]: Entering directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989'
+    rm -f compilerlibs/ocamlcommon.cma
+    rm -f compilerlibs/ocamlcommon.cmxa \
+          compilerlibs/ocamlcommon.a compilerlibs/ocamlcommon.lib
+    rm -f compilerlibs/ocamlbytecomp.cma
+    rm -f compilerlibs/ocamlbytecomp.cmxa \
+          compilerlibs/ocamlbytecomp.a compilerlibs/ocamlbytecomp.lib
+    rm -f compilerlibs/ocamlmiddleend.cma \
+          compilerlibs/ocamlmiddleend.cmxa \
+          compilerlibs/ocamlmiddleend.a \
+          compilerlibs/ocamlmiddleend.lib
+    rm -f compilerlibs/ocamloptcomp.cma
+    rm -f compilerlibs/ocamloptcomp.cmxa \
+          compilerlibs/ocamloptcomp.a compilerlibs/ocamloptcomp.lib
+    rm -f compilerlibs/ocamltoplevel.cma
+    rm -f compilerlibs/ocamlopttoplevel.cmxa \
+      compilerlibs/ocamlopttoplevel.a compilerlibs/ocamlopttoplevel.lib
+    rm -f utils/config.ml utils/domainstate.ml utils/domainstate.mli
+    rm -rf ocamlc
+    rm -f ocamlopt
+    rm -f ocaml
+    rm -f parsing/lexer.ml
+    rm -f ocamlc.opt
+    rm -f ocamlopt.opt
+    rm -f lambda/runtimedef.ml
+    rm -f asmcomp/emit.ml
+    rm -f expunge
+    make -C stdlib clean
+    make[2]: Entering directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/stdlib'
+    rm -f sys.ml
+    rm -f camlheader target_camlheader camlheader_ur camlheaderd target_camlheaderd camlheaderi target_camlheaderi
+    rm -f *.cm* *.o *.obj *.a *.lib *.odoc
+    make[2]: Leaving directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/stdlib'
+    make -C lex clean
+    make[2]: Entering directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/lex'
+    rm -f ocamllex ocamllex.opt ocamllex.exe ocamllex.opt.exe
+    rm -f *.cmo *.cmi *.cmx *.cmt *.cmti *.o *.obj
+    rm -f parser.ml parser.mli parser.output
+    rm -f lexer.ml
+    make[2]: Leaving directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/lex'
+    rm -f \
+      parsing/parser.ml parsing/parser.mli \
+      parsing/camlinternalMenhirLib.ml parsing/camlinternalMenhirLib.mli
+    make -C ocamltest clean
+    make[2]: Entering directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/ocamltest'
+    rm -rf ocamltest ocamltest.exe ocamltest.opt ocamltest.opt.exe
+    rm -rf run_unix.o run_win32.o run_stubs.o run_unix.obj run_win32.obj run_stubs.obj
+    rm -rf ocamltest_config.o ocamltest_unix.o ocamltest_stdlib.o run_command.o filecompare.o variables.o environments.o result.o actions.o tests.o strace.o tsl_ast.o tsl_parser.o tsl_lexer.o modifier_parser.o tsl_semantics.o builtin_variables.o actions_helpers.o builtin_actions.o ocaml_backends.o ocaml_filetypes.o ocaml_variables.o ocaml_modifiers.o ocaml_directories.o ocaml_files.o ocaml_flags.o ocaml_commands.o ocaml_tools.o ocaml_compilers.o ocaml_toplevels.o ocaml_actions.o ocaml_tests.o options.o main.o ocamltest_config.obj ocamltest_unix.obj ocamltest_stdlib.obj run_command.obj filecompare.obj variables.obj environments.obj result.obj actions.obj tests.obj strace.obj tsl_ast.obj tsl_parser.obj tsl_lexer.obj modifier_parser.obj tsl_semantics.obj builtin_variables.obj actions_helpers.obj builtin_actions.obj ocaml_backends.obj ocaml_filetypes.obj ocaml_variables.obj ocaml_modifiers.obj ocaml_directories.obj ocaml_files.obj ocaml_flags.obj ocaml_commands.obj ocaml_tools.obj ocaml_compilers.obj ocaml_toplevels.obj ocaml_actions.obj ocaml_tests.obj options.obj main.obj
+    rm -rf ocamltest_config.cmi ocamltest_unix.cmi ocamltest_stdlib.cmi run_command.cmi filecompare.cmi variables.cmi environments.cmi result.cmi actions.cmi tests.cmi strace.cmi tsl_ast.cmi tsl_parser.cmi tsl_lexer.cmi modifier_parser.cmi tsl_semantics.cmi builtin_variables.cmi actions_helpers.cmi builtin_actions.cmi ocaml_backends.cmi ocaml_filetypes.cmi ocaml_variables.cmi ocaml_modifiers.cmi ocaml_directories.cmi ocaml_files.cmi ocaml_flags.cmi ocaml_commands.cmi ocaml_tools.cmi ocaml_compilers.cmi ocaml_toplevels.cmi ocaml_actions.cmi ocaml_tests.cmi options.cmi main.cmi
+    rm -rf ocamltest_config.cmo ocamltest_unix.cmo ocamltest_stdlib.cmo run_command.cmo filecompare.cmo variables.cmo environments.cmo result.cmo actions.cmo tests.cmo strace.cmo tsl_ast.cmo tsl_parser.cmo tsl_lexer.cmo modifier_parser.cmo tsl_semantics.cmo builtin_variables.cmo actions_helpers.cmo builtin_actions.cmo ocaml_backends.cmo ocaml_filetypes.cmo ocaml_variables.cmo ocaml_modifiers.cmo ocaml_directories.cmo ocaml_files.cmo ocaml_flags.cmo ocaml_commands.cmo ocaml_tools.cmo ocaml_compilers.cmo ocaml_toplevels.cmo ocaml_actions.cmo ocaml_tests.cmo options.cmo main.cmo
+    rm -rf ocamltest_config.cmx ocamltest_unix.cmx ocamltest_stdlib.cmx run_command.cmx filecompare.cmx variables.cmx environments.cmx result.cmx actions.cmx tests.cmx strace.cmx tsl_ast.cmx tsl_parser.cmx tsl_lexer.cmx modifier_parser.cmx tsl_semantics.cmx builtin_variables.cmx actions_helpers.cmx builtin_actions.cmx ocaml_backends.cmx ocaml_filetypes.cmx ocaml_variables.cmx ocaml_modifiers.cmx ocaml_directories.cmx ocaml_files.cmx ocaml_flags.cmx ocaml_commands.cmx ocaml_tools.cmx ocaml_compilers.cmx ocaml_toplevels.cmx ocaml_actions.cmx ocaml_tests.cmx options.cmx main.cmx
+    rm -rf ocamltest_unix.ml ocamltest_config.ml tsl_lexer.ml tsl_parser.mli tsl_parser.ml tsl_parser.output
+    rm -f ocamltest.html
+    rm -rf .dep
+    make[2]: Leaving directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/ocamltest'
+    make -C ocamldoc clean
+    make[2]: Entering directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/ocamldoc'
+    rm -f \#*\#
+    rm -f ocamldoc ocamldoc.opt ocamldoc.exe ocamldoc.opt.exe
+    rm -f *.cma *.cmxa *.cmo *.cmi *.cmx *.cmt *.cmti *.a *.lib *.o *.obj
+    rm -f odoc_parser.output odoc_text_parser.output
+    rm -f odoc_lexer.ml odoc_text_lexer.ml odoc_see_lexer.ml odoc_ocamlhtml.ml
+    rm -f odoc_parser.ml odoc_parser.mli odoc_text_parser.ml odoc_text_parser.mli
+    rm -rf stdlib_man stdlib_html stdlib_texi stdlib_latex
+    rm -f generators/*.cm[taiox] generators/*.a generators/*.lib generators/*.o generators/*.obj \
+            generators/*.cmx[as]
+    make[2]: Leaving directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/ocamldoc'
+    make -C otherlibs partialclean
+    make[2]: Entering directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/otherlibs'
+    make[3]: Entering directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/otherlibs/bigarray'
+    rm -f *.cm*
+    make[3]: Leaving directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/otherlibs/bigarray'
+    make[3]: Entering directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/otherlibs/dynlink'
+    cp -f dynlink_compilerlibs/Makefile.copy-sources dynlink_compilerlibs/Makefile
+    for ml in utils/binutils.ml utils/config.ml utils/build_path_prefix_map.ml utils/misc.ml utils/identifiable.ml utils/numbers.ml utils/arg_helper.ml utils/clflags.ml utils/profile.ml utils/consistbl.ml utils/terminfo.ml utils/warnings.ml utils/local_store.ml utils/load_path.ml utils/int_replace_polymorphic_compare.ml parsing/location.ml parsing/longident.ml parsing/docstrings.ml parsing/syntaxerr.ml parsing/ast_helper.ml parsing/ast_mapper.ml parsing/attr_helper.ml parsing/builtin_attributes.ml typing/ident.ml typing/path.ml typing/primitive.ml typing/type_immediacy.ml typing/types.ml typing/btype.ml typing/subst.ml typing/predef.ml typing/datarepr.ml file_formats/cmi_format.ml typing/persistent_env.ml typing/env.ml lambda/debuginfo.ml lambda/lambda.ml lambda/runtimedef.ml bytecomp/instruct.ml bytecomp/opcodes.ml bytecomp/bytesections.ml bytecomp/dll.ml bytecomp/meta.ml bytecomp/symtable.ml; do \
+              echo "dynlink_compilerlibs/$(basename $ml): ../../$ml" \
+                >> dynlink_compilerlibs/Makefile; \
+              echo "dynlink_compilerlibs/$(basename $ml)i: ../../${ml}i" \
+                >> dynlink_compilerlibs/Makefile; \
+            done;
+    for mli in parsing/asttypes.mli parsing/parsetree.mli typing/outcometree.mli file_formats/cmo_format.mli file_formats/cmxs_format.mli; do \
+              echo "dynlink_compilerlibs/$(basename $mli): ../../$mli" \
+                >> dynlink_compilerlibs/Makefile; \
+              echo \
+                "dynlink_compilerlibs/$(basename $mli .mli).ml: ../../$mli"\
+                >> dynlink_compilerlibs/Makefile; \
+            done
+    cp ../../utils/binutils.ml dynlink_compilerlibs/binutils.ml
+    rm -f extract_crc *.cm[ioaxt] *.cmti *.cmxa \
+          byte/*.cm[iot] byte/*.cmti \
+          native/*.cm[ixt] native/*.cmti native/*.o native/*.obj \
+          dynlink_compilerlibs/*.cm[ioaxt] dynlink_compilerlibs/*.cmti \
+            dynlink_compilerlibs/*.o dynlink_compilerlibs/*.obj
+    make[3]: Leaving directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/otherlibs/dynlink'
+    make[3]: Entering directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/otherlibs/str'
+    rm -f *.cm*
+    make[3]: Leaving directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/otherlibs/str'
+    make[3]: Entering directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/otherlibs/systhreads'
+    rm -f *.cm*
+    make[3]: Leaving directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/otherlibs/systhreads'
+    make[3]: Entering directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/otherlibs/unix'
+    rm -f *.cm*
+    make[3]: Leaving directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/otherlibs/unix'
+    make[3]: Entering directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/otherlibs/win32unix'
+    rm -f *.cm*
+    make[3]: Leaving directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/otherlibs/win32unix'
+    make[2]: Leaving directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/otherlibs'
+    make -C debugger clean
+    make[2]: Entering directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/debugger'
+    rm -f ocamldebug ocamldebug.exe
+    rm -f *.cmo *.cmi
+    rm -f debugger_lexer.ml
+    rm -f debugger_parser.ml debugger_parser.mli
+    make[2]: Leaving directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/debugger'
+    make -C tools clean
+    make[2]: Entering directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/tools'
+    rm -f -- ocamldep ocamldep.opt ocamldep.exe ocamldep.opt.exe
+    rm -f ocamldep ocamldep.exe ocamldep.opt ocamldep.opt.exe
+    rm -f -- ocamlprof ocamlprof.opt ocamlprof.exe ocamlprof.opt.exe
+    rm -f -- ocamlcp ocamlcp.opt ocamlcp.exe ocamlcp.opt.exe
+    rm -f -- ocamloptp ocamloptp.opt ocamloptp.exe ocamloptp.opt.exe
+    rm -f -- ocamlmklib ocamlmklib.opt ocamlmklib.exe ocamlmklib.opt.exe
+    rm -f ocamlmklibconfig.ml
+    rm -f -- ocamlmktop ocamlmktop.opt ocamlmktop.exe ocamlmktop.opt.exe
+    rm -f cvt_emit.ml cvt_emit cvt_emit.exe
+    rm -f -- ocamlcmt ocamlcmt.opt ocamlcmt.exe ocamlcmt.opt.exe
+    rm -f -- dumpobj dumpobj.opt dumpobj.exe dumpobj.opt.exe
+    rm -f opnames.ml make_opcodes make_opcodes.exe make_opcodes.ml
+    rm -f -- ocamlobjinfo ocamlobjinfo.opt ocamlobjinfo.exe ocamlobjinfo.opt.exe
+    rm -f -- primreq primreq.opt primreq.exe primreq.opt.exe
+    rm -f -- lintapidiff.opt lintapidiff.opt.exe
+    rm -f lintapidiff.cm? lintapidiff.o lintapidiff.obj
+    rm -f -- stripdebug stripdebug.opt stripdebug.exe stripdebug.opt.exe
+    rm -f -- cmpbyt cmpbyt.opt cmpbyt.exe cmpbyt.opt.exe
+    rm -f -- caml-tex caml-tex.exe caml_tex.cm?
+    rm -f *.cmo *.cmi *.cma *.dll *.so *.lib *.a
+    make[2]: Leaving directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/tools'
+    rm -f asmcomp/arch.ml asmcomp/proc.ml asmcomp/CSE.ml asmcomp/selection.ml asmcomp/scheduling.ml asmcomp/reload.ml
+    rm -f ocamlnat ocamlnat.exe
+    rm -f bytecomp/opcodes.ml
+    rm -f bytecomp/opcodes.mli
+    for d in utils parsing typing bytecomp asmcomp middle_end file_formats \
+               lambda middle_end/closure middle_end/flambda \
+               middle_end/flambda/base_types asmcomp/debug \
+               driver toplevel tools; do \
+      rm -f $d/*.cm[ioxt] $d/*.cmti $d/*.annot $d/*.s $d/*.asm \
+        $d/*.o $d/*.obj $d/*.so $d/*.dll; \
+    done
+    make[1]: Leaving directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989'
+    make -C flexdll \
+         OCAML_CONFIG_FILE=../Makefile.config \
+                 MSVC_DETECT=0 CHAINS=mingw64 NATDYNLINK=false support
+    make[1]: Entering directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/flexdll'
+    /bin/sh: ocamlopt: command not found
+    for i in mingw64; do make --no-print-directory build_$i || break ; done
+    /bin/sh: ocamlopt: command not found
+    x86_64-w64-mingw32-gcc -c -DMINGW -o flexdll_mingw64.o flexdll.c
+    x86_64-w64-mingw32-gcc -c -o flexdll_initer_mingw64.o flexdll_initer.c
+    make[1]: Leaving directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/flexdll'
+    # esy-build-package: running: "./esy-build"
+    [esy-build] Detected windows environment...
+    make coldstart
+    make[1]: Entering directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989'
+    make -C runtime FLEXLINK_CMD="../boot/ocamlrun.exe ../flexdll/flexlink.exe" all
+    make[2]: Entering directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/runtime'
+    echo "C:/Users/masaz/.esy/3________________________________________________________________/s/ocaml-4.12.0-a9c9b989/lib/ocaml/stublibs" > ld.conf
+    tr -d '\r' < caml/instruct.h | \
+    sed -e '/\/\*/d' \
+        -e '/^#/d' \
+        -e 's/enum /static char * names_of_/' \
+        -e 's/{$/[] = {/' \
+        -e 's/\([[:upper:]][[:upper:]_0-9]*\)/"\1"/g' > caml/opnames.h
+    ../tools/make-version-header.sh ../VERSION > caml/version.h
+    echo "C:/Users/masaz/.esy/3________________________________________________________________/s/ocaml-4.12.0-a9c9b989/lib/ocaml" >> ld.conf
+    tr -d '\r' < caml/instruct.h | \
+    sed -n -e '/^  /s/ \([A-Z]\)/ \&\&lbl_\1/gp' \
+           -e '/^}/q' > caml/jumptbl.h
+    cp primitives.new primitives
+    (echo '#define CAML_INTERNALS'; \
+             echo '#include "caml/mlvalues.h"'; \
+     echo '#include "caml/prims.h"'; \
+     sed -e 's/.*/extern value &();/' primitives; \
+     echo 'c_primitive caml_builtin_cprim[] = {'; \
+     sed -e 's/.*/      &,/' primitives; \
+     echo '      0 };'; \
+     echo 'char * caml_names_of_builtin_cprim[] = {'; \
+     sed -e 's/.*/      "&",/' primitives; \
+     echo '      0 };') > prims.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  \
+      -o prims.o prims.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o interp.b.o interp.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o misc.b.o misc.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o stacks.b.o stacks.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o fix_code.b.o fix_code.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o startup_aux.b.o startup_aux.c       
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o startup_byt.b.o startup_byt.c       
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o freelist.b.o freelist.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o major_gc.b.o major_gc.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o minor_gc.b.o minor_gc.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o memory.b.o memory.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o alloc.b.o alloc.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o roots_byt.b.o roots_byt.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o globroots.b.o globroots.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o fail_byt.b.o fail_byt.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o signals.b.o signals.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o signals_byt.b.o signals_byt.c       
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o printexc.b.o printexc.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o backtrace_byt.b.o backtrace_byt.c   
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o backtrace.b.o backtrace.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o compare.b.o compare.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o ints.b.o ints.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o eventlog.b.o eventlog.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o floats.b.o floats.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o str.b.o str.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o array.b.o array.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o io.b.o io.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o extern.b.o extern.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o intern.b.o intern.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o hash.b.o hash.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o sys.b.o sys.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o meta.b.o meta.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o parsing.b.o parsing.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o gc_ctrl.b.o gc_ctrl.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o md5.b.o md5.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o obj.b.o obj.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o lexing.b.o lexing.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o callback.b.o callback.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o debugger.b.o debugger.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o weak.b.o weak.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o compact.b.o compact.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o finalise.b.o finalise.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o custom.b.o custom.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DOCAML_STDLIB_DIR='L"C:/Users/masaz/.esy/3________________________________________________________________/s/ocaml-4.12.0-a9c9b989/lib/ocaml"'  -o dynlink.b.o dynlink.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o afl.b.o afl.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o win32.b.o win32.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o bigarray.b.o bigarray.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o main.b.o main.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o memprof.b.o memprof.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o domain.b.o domain.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o skiplist.b.o skiplist.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT=  -o codefrag.b.o codefrag.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o interp.bd.o interp.c        
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o misc.bd.o misc.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o stacks.bd.o stacks.c        
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o fix_code.bd.o fix_code.c    
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o startup_aux.bd.o startup_aux.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o startup_byt.bd.o startup_byt.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o freelist.bd.o freelist.c    
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o major_gc.bd.o major_gc.c    
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o minor_gc.bd.o minor_gc.c    
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o memory.bd.o memory.c        
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o alloc.bd.o alloc.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o roots_byt.bd.o roots_byt.c  
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o globroots.bd.o globroots.c  
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o fail_byt.bd.o fail_byt.c    
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o signals.bd.o signals.c      
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o signals_byt.bd.o signals_byt.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o printexc.bd.o printexc.c    
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o backtrace_byt.bd.o backtrace_byt.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o backtrace.bd.o backtrace.c  
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o compare.bd.o compare.c      
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o ints.bd.o ints.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o eventlog.bd.o eventlog.c    
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o floats.bd.o floats.c        
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o str.bd.o str.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o array.bd.o array.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o io.bd.o io.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o extern.bd.o extern.c        
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o intern.bd.o intern.c        
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o hash.bd.o hash.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o sys.bd.o sys.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o meta.bd.o meta.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o parsing.bd.o parsing.c      
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o gc_ctrl.bd.o gc_ctrl.c      
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o md5.bd.o md5.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o obj.bd.o obj.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o lexing.bd.o lexing.c        
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o callback.bd.o callback.c    
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o debugger.bd.o debugger.c    
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o weak.bd.o weak.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o compact.bd.o compact.c      
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o finalise.bd.o finalise.c    
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o custom.bd.o custom.c        
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG -DOCAML_STDLIB_DIR='L"C:/Users/masaz/.esy/3________________________________________________________________/s/ocaml-4.12.0-a9c9b989/lib/ocaml"'  -o dynlink.bd.o dynlink.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o afl.bd.o afl.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o win32.bd.o win32.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o bigarray.bd.o bigarray.c    
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o main.bd.o main.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o memprof.bd.o memprof.c      
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o domain.bd.o domain.c        
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o skiplist.bd.o skiplist.c    
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o codefrag.bd.o codefrag.c    
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DDEBUG  -o instrtrace.bd.o instrtrace.c    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o interp.bi.o interp.c   
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o misc.bi.o misc.c       
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o stacks.bi.o stacks.c   
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o fix_code.bi.o fix_code.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o startup_aux.bi.o startup_aux.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o startup_byt.bi.o startup_byt.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o freelist.bi.o freelist.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o major_gc.bi.o major_gc.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o minor_gc.bi.o minor_gc.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o memory.bi.o memory.c   
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o alloc.bi.o alloc.c     
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o roots_byt.bi.o roots_byt.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o globroots.bi.o globroots.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o fail_byt.bi.o fail_byt.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o signals.bi.o signals.c 
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o signals_byt.bi.o signals_byt.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o printexc.bi.o printexc.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o backtrace_byt.bi.o backtrace_byt.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o backtrace.bi.o backtrace.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o compare.bi.o compare.c 
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o ints.bi.o ints.c       
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o eventlog.bi.o eventlog.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o floats.bi.o floats.c   
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o str.bi.o str.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o array.bi.o array.c     
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o io.bi.o io.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o extern.bi.o extern.c   
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o intern.bi.o intern.c   
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o hash.bi.o hash.c       
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o sys.bi.o sys.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o meta.bi.o meta.c       
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o parsing.bi.o parsing.c 
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o gc_ctrl.bi.o gc_ctrl.c 
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o md5.bi.o md5.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o obj.bi.o obj.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o lexing.bi.o lexing.c   
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o callback.bi.o callback.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o debugger.bi.o debugger.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o weak.bi.o weak.c       
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o compact.bi.o compact.c 
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o finalise.bi.o finalise.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o custom.bi.o custom.c   
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR -DOCAML_STDLIB_DIR='L"C:/Users/masaz/.esy/3________________________________________________________________/s/ocaml-4.12.0-a9c9b989/lib/ocaml"'  -o dynlink.bi.o dynlink.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o afl.bi.o afl.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o win32.bi.o win32.c     
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o bigarray.bi.o bigarray.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o main.bi.o main.c       
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o memprof.bi.o memprof.c 
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o domain.bi.o domain.c   
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o skiplist.bi.o skiplist.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp -g  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I"../flexdll" -DCAMLDLLIMPORT= -DCAML_INSTR  -o codefrag.bi.o codefrag.c
+    rm -f libcamlrun.a && x86_64-w64-mingw32-ar rc libcamlrun.a  interp.b.o misc.b.o stacks.b.o fix_code.b.o startup_aux.b.o startup_byt.b.o freelist.b.o major_gc.b.o minor_gc.b.o memory.b.o alloc.b.o roots_byt.b.o globroots.b.o fail_byt.b.o signals.b.o signals_byt.b.o printexc.b.o backtrace_byt.b.o backtrace.b.o compare.b.o ints.b.o eventlog.b.o floats.b.o str.b.o array.b.o io.b.o extern.b.o intern.b.o hash.b.o sys.b.o meta.b.o parsing.b.o gc_ctrl.b.o md5.b.o obj.b.o lexing.b.o callback.b.o debugger.b.o weak.b.o compact.b.o finalise.b.o custom.b.o dynlink.b.o afl.b.o win32.b.o bigarray.b.o main.b.o memprof.b.o domain.b.o skiplist.b.o codefrag.b.o && x86_64-w64-mingw32-ranlib libcamlrun.a
+    rm -f libcamlrund.a && x86_64-w64-mingw32-ar rc libcamlrund.a  interp.bd.o misc.bd.o stacks.bd.o fix_code.bd.o startup_aux.bd.o startup_byt.bd.o freelist.bd.o major_gc.bd.o minor_gc.bd.o memory.bd.o alloc.bd.o roots_byt.bd.o globroots.bd.o fail_byt.bd.o signals.bd.o signals_byt.bd.o printexc.bd.o backtrace_byt.bd.o backtrace.bd.o compare.bd.o ints.bd.o eventlog.bd.o floats.bd.o str.bd.o array.bd.o io.bd.o extern.bd.o intern.bd.o hash.bd.o sys.bd.o meta.bd.o parsing.bd.o gc_ctrl.bd.o md5.bd.o obj.bd.o lexing.bd.o callback.bd.o debugger.bd.o weak.bd.o compact.bd.o finalise.bd.o custom.bd.o dynlink.bd.o afl.bd.o win32.bd.o bigarray.bd.o main.bd.o memprof.bd.o domain.bd.o skiplist.bd.o codefrag.bd.o instrtrace.bd.o && x86_64-w64-mingw32-ranlib libcamlrund.a
+    rm -f libcamlruni.a && x86_64-w64-mingw32-ar rc libcamlruni.a  interp.bi.o misc.bi.o stacks.bi.o fix_code.bi.o startup_aux.bi.o startup_byt.bi.o freelist.bi.o major_gc.bi.o minor_gc.bi.o memory.bi.o alloc.bi.o roots_byt.bi.o globroots.bi.o fail_byt.bi.o signals.bi.o signals_byt.bi.o printexc.bi.o backtrace_byt.bi.o backtrace.bi.o compare.bi.o ints.bi.o eventlog.bi.o floats.bi.o str.bi.o array.bi.o io.bi.o extern.bi.o intern.bi.o hash.bi.o sys.bi.o meta.bi.o parsing.bi.o gc_ctrl.bi.o md5.bi.o obj.bi.o lexing.bi.o callback.bi.o debugger.bi.o weak.bi.o compact.bi.o finalise.bi.o custom.bi.o dynlink.bi.o afl.bi.o win32.bi.o bigarray.bi.o main.bi.o memprof.bi.o domain.bi.o skiplist.bi.o codefrag.bi.o && x86_64-w64-mingw32-ranlib libcamlruni.a
+    ../boot/ocamlrun.exe ../flexdll/flexlink.exe -chain mingw64 -stack 33554432 -exe -link "-municode" -o ocamlrun.exe prims.o libcamlrun.a -lws2_32 -lversion       
+    ../boot/ocamlrun.exe ../flexdll/flexlink.exe -chain mingw64 -stack 33554432 -exe -link "-municode" -link -g -o ocamlrund.exe prims.o libcamlrund.a -lws2_32 -lversion
+    ../boot/ocamlrun.exe ../flexdll/flexlink.exe -chain mingw64 -stack 33554432 -exe -link "-municode" -o ocamlruni.exe prims.o libcamlruni.a -lws2_32 -lversion     
+    make[2]: Leaving directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/runtime'
+    cp runtime/ocamlrun.exe boot/ocamlrun.exe
+    make -C stdlib FLEXLINK_CMD="../boot/ocamlrun.exe ../flexdll/flexlink.exe" \
+      CAMLC='$(BOOT_OCAMLC) -use-prims ../runtime/primitives' all
+    make[2]: Entering directory '/cygdrive/c/Users/masaz/.esy/3/b/ocaml-4.12.0-a9c9b989/stdlib'
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats  -nopervasives -c camlinternalFormatBasics.mli
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats  -nopervasives -c camlinternalAtomic.mli
+    sed -e "s|%%VERSION%%|`sed -e 1q ../VERSION | tr -d '\r'`|" sys.mlp > sys.ml
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I../runtime -DRUNTIME_NAME='"ocamlrun"'  \
+      -o headernt.o headernt.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I../runtime -DRUNTIME_NAME='"ocamlrund"'  \
+      -o headerntd.o headernt.c
+    x86_64-w64-mingw32-gcc -c -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp  -DCAML_NAME_SPACE -D__USE_MINGW_ANSI_STDIO=0 -DUNICODE -D_UNICODE -DWINDOWS_UNICODE=1 -I../runtime -DRUNTIME_NAME='"ocamlruni"'  \
+      -o headernti.o headernt.c
+    x86_64-w64-mingw32-gcc -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp 
+ -municode -o tmpheader.exe headernt.o
+    x86_64-w64-mingw32-gcc -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp 
+ -municode -o tmpheaderd.exe headerntd.o
+    rm -f camlheader.exe
+    mv tmpheader.exe camlheader
+    rm -f camlheaderd.exe
+    mv tmpheaderd.exe camlheaderd
+    ../boot/ocamlrun.exe ../boot/ocamlc -use-prims ../runtime/primitives -strict-sequence -absname -w +a-4-9-41-42-44-45-48 -g -warn-error A -bin-annot -nostdlib -principal -safe-string -strict-formats  -nopervasives -c camlinternalAtomic.ml
+    cp camlheader target_camlheader
+    cp camlheader camlheader_ur
+    cp camlheaderd target_camlheaderd
+    x86_64-w64-mingw32-gcc -O2 -fno-strict-aliasing -fwrapv -mms-bitfields -Wno-unused -Wall -Wdeclaration-after-statement -fexcess-precision=standard -fno-tree-vrp 
+ -municode -o tmpheaderi.exe headernti.o
+    rm -f camlheaderi.exe
+    mv tmpheaderi.exe camlheaderi
+    cp camlheaderi target_camlheaderi
+
+  building ocaml@4.12.0

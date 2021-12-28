@@ -9,6 +9,7 @@
 *.cmx
 _build
 *.o
+*.exe
 
 *.aux
 *.fdb_latexmk
@@ -21,5 +22,3 @@ _build
 venv
 env
 node_modules
-
-*.json

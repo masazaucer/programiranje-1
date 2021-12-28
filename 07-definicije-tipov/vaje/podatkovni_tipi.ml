@@ -187,7 +187,7 @@ let zero_magic = {
  - : magic_counter = {fire = 3; frost = 0; arcane = 0}
 [*----------------------------------------------------------------------------*)
 let rec count_magic lst = 
-       let count_aux acc l = 
+       let rec count_aux acc l = 
        match l with
        | [] -> acc
        | x :: xs -> (match x.status with

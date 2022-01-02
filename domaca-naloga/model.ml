@@ -67,7 +67,10 @@ let boxes grid = List.init 9 (get_box grid)
 
 (* Funkcije za ustvarjanje novih mrež *)
 
-let map_grid (f : 'a -> 'b) (grid : 'a grid) : 'b grid = failwith "TODO"
+let map_grid (f : 'a -> 'b) (grid : 'a grid) : 'b grid = 
+  let map_row ind = Array.init 9 (fun x -> f(grid.(ind).(x)))
+  in Array.init 9 map_row
+
 
 let copy_grid (grid : 'a grid) : 'a grid = map_grid (fun x -> x) grid
 

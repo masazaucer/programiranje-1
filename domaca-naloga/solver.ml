@@ -61,7 +61,9 @@ let validate_state (state : state) : response =
     if Model.is_valid_solution state.problem solution then Solved solution
     else Fail state
 
-let insert_field (i, j) element grid = failwith "TODO"
+let insert_field (i, j) element (grid : 'a Model.grid) : 'a Model.grid = 
+  let map_row x = Array.init 9 (fun y -> if (x, y) = (i, j) then Some element else grid.(x).(y))
+  in Array.init 9 map_row
 
 let branch_state (state : state) : (state * state) option =
   (* TODO: Pripravite funkcijo, ki v trenutnem stanju poišče hipotezo, glede katere
@@ -80,7 +82,7 @@ let branch_state (state : state) : (state * state) option =
         let (i, j) = option.loc in
         let other_options = {loc=(i, j); possible=other} :: rest in
         Some (
-          {state with current_grid=Model.copy_grid (insert_field (i, j) opt1 state.current_grid); available=rest}, (* Je nujno kopirati? *)
+          {state with current_grid=insert_field (i, j) opt1 state.current_grid; available=rest}, (* Je treba kopirati? *)
           {state with current_grid=Model.copy_grid state.current_grid; available=other_options}
         )
 

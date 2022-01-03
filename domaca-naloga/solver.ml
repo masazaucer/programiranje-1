@@ -2,7 +2,7 @@ type available = { loc : int * int; possible : int list }
 
 (* TODO: tip stanja ustrezno popravite, saj boste med reševanjem zaradi učinkovitosti
    želeli imeti še kakšno dodatno informacijo *)
-type state = { problem : Model.problem; current_grid : int option Model.grid ; available : available option list}
+type state = { problem : Model.problem; current_grid : int option Model.grid ; available : available list}
 
 let print_state (state : state) : unit =
   Model.print_grid
@@ -47,7 +47,8 @@ let all_available grid = (* Naredi seznam vseh moznosti po poljih *)
     )))
     
 let initialize_state (problem : Model.problem) : state =
-  { current_grid = Model.copy_grid problem.initial_grid; problem ; available = all_available problem.initial_grid}
+  let available = List.filter_map (fun x-> x) (all_available problem.initial_grid) in
+  { current_grid = Model.copy_grid problem.initial_grid; problem ; available = available}
 
 let validate_state (state : state) : response =
   let unsolved =
@@ -60,13 +61,29 @@ let validate_state (state : state) : response =
     if Model.is_valid_solution state.problem solution then Solved solution
     else Fail state
 
+let insert_field (i, j) element grid = failwith "TODO"
+
 let branch_state (state : state) : (state * state) option =
   (* TODO: Pripravite funkcijo, ki v trenutnem stanju poišče hipotezo, glede katere
      se je treba odločiti. Če ta obstaja, stanje razveji na dve stanji:
      v prvem predpostavi, da hipoteza velja, v drugem pa ravno obratno.
      Če bo vaš algoritem najprej poizkusil prvo možnost, vam morda pri drugi
-     za začetek ni treba zapravljati preveč časa, saj ne bo nujno prišla v poštev. *)
-     failwith "TODO"
+     za začetek ni treba zapravljati preveč časa, saj ne bo nujno prišla v poštev. *)  
+  let compare_options option1 option2 = List.compare_lengths option1.possible option2.possible in
+  let sorted = List.sort compare_options state.available in
+  match sorted with
+    | [] -> None
+    | option :: rest -> 
+      match option.possible with
+      | [] -> None
+      | opt1 :: other ->
+        let (i, j) = option.loc in
+        let other_options = {loc=(i, j); possible=other} :: rest in
+        Some (
+          {state with current_grid=Model.copy_grid (insert_field (i, j) opt1 state.current_grid); available=rest}, (* Je nujno kopirati? *)
+          {state with current_grid=Model.copy_grid state.current_grid; available=other_options}
+        )
+
 
 (* pogledamo, če trenutno stanje vodi do rešitve *)
 let rec solve_state (state : state) =

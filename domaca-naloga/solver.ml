@@ -11,7 +11,8 @@ let print_state (state : state) : unit =
 
 type response = Solved of Model.solution | Unsolved of state | Fail of state
 
-let get_elements_of_element element =
+(* Analiza vseh moznosti za vsako polje *)
+let get_elements_of_element element = (* Pobere vse vrednosti iz vrstice/stolpca/boxa *)
   let list_of_element = Array.to_list element in
   let rec filter acc l =
     match l with
@@ -19,14 +20,14 @@ let get_elements_of_element element =
     | x :: xs -> if Option.is_some x then filter ((Option.get x) :: acc) xs else filter acc xs
   in filter [] list_of_element
 
-let all_elements_for_element list =
+let all_elements_for_element list = (* Pobere vse vrednosti za vsako vrstico/stolpec/box *)
   let rec aux acc l =
     match l with
     | [] -> acc 
     | x :: xs -> aux (Array.append acc [|get_elements_of_element x|]) xs
   in aux [||] list
 
-let all_possibilities possibilities_row possibilities_column possibilities_box =
+let all_possibilities possibilities_row possibilities_column possibilities_box = (* Poisce vse stevke, ki jih se ni v dani vrstici, stolpcu in boxu *)
   let list = List.concat [possibilities_row; possibilities_column; possibilities_box] in
   let digits = List.init 9 (fun x -> x) in
   let rec filter acc l =
@@ -35,7 +36,7 @@ let all_possibilities possibilities_row possibilities_column possibilities_box =
     | x :: xs -> if List.exists ((=) x) list then filter acc xs else filter (x :: acc) xs
   in filter [] digits
 
-let all_available grid = 
+let all_available grid = (* Naredi seznam vseh moznosti po poljih *)
   let available_rows = all_elements_for_element (Model.rows grid) 
   and available_columns = all_elements_for_element (Model.columns grid)
   and available_boxes = all_elements_for_element (Model.boxes grid) in
@@ -65,7 +66,6 @@ let branch_state (state : state) : (state * state) option =
      v prvem predpostavi, da hipoteza velja, v drugem pa ravno obratno.
      Če bo vaš algoritem najprej poizkusil prvo možnost, vam morda pri drugi
      za začetek ni treba zapravljati preveč časa, saj ne bo nujno prišla v poštev. *)
-  
      failwith "TODO"
 
 (* pogledamo, če trenutno stanje vodi do rešitve *)

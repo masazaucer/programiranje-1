@@ -111,7 +111,7 @@ type problem = { initial_grid : int option grid }
 
 let print_problem problem : unit = 
   let string_of_cell = function
-    | None -> "/"
+    | None -> "?"
     | Some i -> string_of_int i
   in print_grid string_of_cell problem.initial_grid
     
@@ -130,4 +130,19 @@ type solution = int grid
 
 let print_solution (solution : solution) = print_grid string_of_int solution
 
-let is_valid_solution problem solution = failwith "TODO"
+let is_valid_solution problem solution = 
+  let check_part part = 
+    let checked_cells = Array.init 9 (fun x -> Array.exists ((=) (x + 1)) part) in
+    Array.for_all ((=) true) checked_cells
+  in
+  let check_all element =
+    let rec check acc element= match element with
+      | [] -> acc
+      | x :: xs -> check ((check_part x) :: acc) xs
+    in List.for_all ((=) true) (check [] element)
+  in
+  let rows = rows solution 
+  and columns = columns solution
+  and boxes = boxes solution in
+  check_all rows && check_all columns && check_all boxes
+

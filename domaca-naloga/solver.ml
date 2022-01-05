@@ -4,10 +4,22 @@ type available = { loc : int * int; possible : int list }
    želeli imeti še kakšno dodatno informacijo *)
 type state = { problem : Model.problem; current_grid : int option Model.grid; available : available list; just_added : (int * int) option}
 
+let string_of_element (element : available) =
+  let (x, y) = element.loc in
+  let possible = element.possible in
+  (string_of_int x) ^ "," ^ (string_of_int y) ^ ":" ^ (Model.string_of_list string_of_int "," possible)
+
+let string_of_available available_list =
+  Model.string_of_list string_of_element "\n" available_list
+
+
+
 let print_state (state : state) : unit =
   Model.print_grid
     (function None -> "?" | Some digit -> string_of_int digit)
-    state.current_grid
+    state.current_grid;
+  Printf.printf "%s" (string_of_available state.available)
+
 
 type response = Solved of Model.solution | Unsolved of state | Fail of state
 
@@ -29,7 +41,7 @@ let all_elements_for_element list = (* Pobere vse vrednosti za vsako vrstico/sto
 
 let all_possibilities possibilities_row possibilities_column possibilities_box = (* Poisce vse stevke, ki jih se ni v dani vrstici, stolpcu in boxu *)
   let list = List.concat [possibilities_row; possibilities_column; possibilities_box] in
-  let digits = List.init 9 (fun x -> x) in
+  let digits = List.init 9 (fun x -> x + 1) in
   let rec filter acc l =
     match l with
     | [] -> acc
@@ -47,7 +59,7 @@ let all_available grid = (* Naredi seznam vseh moznosti po poljih *)
     )))
     
 let initialize_state (problem : Model.problem) : state =
-  let available = List.filter_map (fun x-> x) (all_available problem.initial_grid) in
+  let available = List.filter_map (fun x -> x) (all_available problem.initial_grid) in
   { current_grid = Model.copy_grid problem.initial_grid; problem ; available = available; just_added = None}
 
 let validate_state (state : state) : response =
@@ -108,15 +120,16 @@ let narrow_options (state : state) : state = (* Izbrise stevke, ki niso vec na r
           correct_related (option :: acc) rest
     in
     let new_available = correct_related [] state.available in
-    {state with available = new_available}
+    {state with available = new_available; just_added = None}
 
     
 (* pogledamo, če trenutno stanje vodi do rešitve *)
 let rec solve_state (state : state) =
   (* uveljavimo trenutne omejitve in pogledamo, kam smo prišli *)
   (* TODO: na tej točki je stanje smiselno počistiti in zožiti možne rešitve *)
-  
-  match validate_state state with
+  (*print_state state;*)
+  let new_state = narrow_options state in
+  match validate_state new_state with
   | Solved solution ->
       (* če smo našli rešitev, končamo *)
       Some solution
@@ -125,8 +138,7 @@ let rec solve_state (state : state) =
       None
   | Unsolved state' ->
       (* če še nismo končali, raziščemo stanje, v katerem smo končali *)
-      let new_state = narrow_options state' in
-      explore_state new_state
+      explore_state state'
 
 and explore_state (state : state) =
   (* pri raziskovanju najprej pogledamo, ali lahko trenutno stanje razvejimo *)

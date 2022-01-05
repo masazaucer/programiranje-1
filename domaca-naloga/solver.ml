@@ -2,7 +2,7 @@ type available = { loc : int * int; possible : int list }
 
 (* TODO: tip stanja ustrezno popravite, saj boste med reševanjem zaradi učinkovitosti
    želeli imeti še kakšno dodatno informacijo *)
-type state = { problem : Model.problem; current_grid : int option Model.grid ; available : available list}
+type state = { problem : Model.problem; current_grid : int option Model.grid; available : available list; just_added : (int * int) option}
 
 let print_state (state : state) : unit =
   Model.print_grid
@@ -48,7 +48,7 @@ let all_available grid = (* Naredi seznam vseh moznosti po poljih *)
     
 let initialize_state (problem : Model.problem) : state =
   let available = List.filter_map (fun x-> x) (all_available problem.initial_grid) in
-  { current_grid = Model.copy_grid problem.initial_grid; problem ; available = available}
+  { current_grid = Model.copy_grid problem.initial_grid; problem ; available = available; just_added = None}
 
 let validate_state (state : state) : response =
   let unsolved =
@@ -82,15 +82,40 @@ let branch_state (state : state) : (state * state) option =
         let (i, j) = option.loc in
         let other_options = {loc=(i, j); possible=other} :: rest in
         Some (
-          {state with current_grid=insert_field (i, j) opt1 state.current_grid; available=rest}, (* Je treba kopirati? *)
-          {state with current_grid=Model.copy_grid state.current_grid; available=other_options}
+          {state with current_grid=insert_field (i, j) opt1 state.current_grid; available=rest; just_added = Some (i, j)}, (* Je treba kopirati? *)
+          {state with current_grid=Model.copy_grid state.current_grid; available=other_options; just_added = None}
         )
 
+let rec filter (acc : int list) (el : int) = function
+  | [] -> acc
+  | x :: xs -> if x = el then filter acc el xs else filter (x :: acc) el xs
 
+
+let narrow_options (state : state) : state = (* Izbrise stevke, ki niso vec na razpolago na dolocenem polju *)
+  match state.just_added with
+  | None -> state
+  | Some (i, j) -> 
+    let el = Option.get state.current_grid.(i).(j) in
+    let rec correct_related acc l =
+      match l with
+      | [] -> acc
+      | option :: rest -> 
+        let (x, y) = option.loc in
+        if x = i || y = j || (((x / 3) = (i / 3)) && ((y / 3) = (j / 3))) then 
+          let possible  = filter [] el option.possible in
+          correct_related ({loc=(x, y); possible=possible} :: acc) rest
+        else
+          correct_related (option :: acc) rest
+    in
+    let new_available = correct_related [] state.available in
+    {state with available = new_available}
+
+    
 (* pogledamo, če trenutno stanje vodi do rešitve *)
 let rec solve_state (state : state) =
   (* uveljavimo trenutne omejitve in pogledamo, kam smo prišli *)
   (* TODO: na tej točki je stanje smiselno počistiti in zožiti možne rešitve *)
+  
   match validate_state state with
   | Solved solution ->
       (* če smo našli rešitev, končamo *)
@@ -100,7 +125,8 @@ let rec solve_state (state : state) =
       None
   | Unsolved state' ->
       (* če še nismo končali, raziščemo stanje, v katerem smo končali *)
-      explore_state state'
+      let new_state = narrow_options state' in
+      explore_state new_state
 
 and explore_state (state : state) =
   (* pri raziskovanju najprej pogledamo, ali lahko trenutno stanje razvejimo *)

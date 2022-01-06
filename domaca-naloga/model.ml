@@ -93,27 +93,45 @@ let foldi_grid (f : int -> int -> 'a -> 'acc -> 'acc) (grid : 'a grid)
 let row_of_string cell_of_char str =
   List.init (String.length str) (String.get str) |> List.filter_map cell_of_char
 
+let string_to_tuple str =
+  let lst = String.split_on_char ',' (String.sub str 1 3) in
+  match lst with
+  | [x; y] -> (int_of_string x, int_of_string y)
+  | _ -> failwith "Neveljaven termometer"
+
+let tuple_to_string string_of_element (x, y) = "(" ^ string_of_element x ^ "," ^ string_of_element y ^ ")"
+
 let grid_of_string cell_of_char str =
   let grid =
     str |> String.split_on_char '\n'
+    |> List.filter (fun x -> String.length x > 0 && x.[0] <> 'T' && x.[0] <> '#')
     |> List.map (row_of_string cell_of_char)
-    |> List.filter (function [] -> false | _ -> true)
+    |> List.filter (function [] -> false | _ -> true) (*ne rabimo vec?*)
     |> List.map Array.of_list |> Array.of_list
   in
   if Array.length grid <> 9 then failwith "Nepravilno število vrstic";
   if Array.exists (fun x -> x <> 9) (Array.map Array.length grid) then
     failwith "Nepravilno število stolpcev";
-  grid
+  let termometri =
+    str
+    |> String.split_on_char '\n'
+    |> List.filter (fun x -> String.length x > 0 && x.[0] = 'T')
+    |> List.map (fun x -> String.sub x 3 (String.length x - 3))
+    |> List.map ((String.split_on_char ';'))
+    |> List.map (List.map (fun x -> string_to_tuple x))
+  in
+  (grid, termometri)
 
 (* Model za vhodne probleme *)
 
-type problem = { initial_grid : int option grid }
+type problem = { initial_grid : int option grid ; termometri : (int * int) list list}
 
 let print_problem problem : unit = 
   let string_of_cell = function
     | None -> "?"
     | Some i -> string_of_int i
-  in print_grid string_of_cell problem.initial_grid
+  in print_grid string_of_cell problem.initial_grid;
+  Printf.printf "%s" (string_of_nested_list (tuple_to_string string_of_int) ";" "\n" problem.termometri)
     
 
 let problem_of_string str =
@@ -122,7 +140,8 @@ let problem_of_string str =
     | c when '1' <= c && c <= '9' -> Some (Some (Char.code c - Char.code '0'))
     | _ -> None
   in
-  { initial_grid = grid_of_string cell_of_char str }
+  let (grid, termometri) = grid_of_string cell_of_char str in
+  { initial_grid = grid; termometri = termometri }
 
 (* Model za izhodne rešitve *)
 

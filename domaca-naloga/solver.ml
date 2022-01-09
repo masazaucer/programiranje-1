@@ -7,7 +7,8 @@ type state = { problem : Model.problem;
               available : available list; 
               just_added : (int * int) option;
               thermometers : (int * int) list list;
-              arrows : ((int * int) * (int * int) list) list}
+              arrows : ((int * int) * (int * int) list) list;
+              cages : (int * (int * int) list) list}
 
 
 type response = Solved of Model.solution | Unsolved of state | Fail of state
@@ -181,7 +182,7 @@ let check_arrow_head ((x, y), tail) (state : state) : available list =
   | None -> 
     let (min, max) = min_max_of_tail 0 0 state tail in
     let options = get_options (x, y) state.available in 
-    let new_options = List.filter ((>)max) (List.filter ((<) min) options) in
+    let new_options = List.filter ((>)(max + 1)) (List.filter ((<)(min - 1)) options) in
     [{loc = (x, y); possible = new_options}]
  
 
@@ -217,10 +218,47 @@ let narrow_arrows (state : state) : state =
   let rec check = function
   | [] -> !current_state
   | arrow :: rest -> 
-    current_state := check_arrow state arrow;
+    current_state := check_arrow !current_state arrow;
     check rest
   in check state.arrows
 
+(*CHECK CAGES*)
+
+let min_max (x, y) state =
+  match state.current_grid.(x).(y) with
+  | Some x -> (x, x)
+  | None -> 
+    let options = get_options (x, y) state.available in 
+    (min 9 options, max 1 options)
+
+let check_cage state (sum, cages) =
+  let extrem = List.map (fun (x, y) -> ((x, y), min_max (x, y) state)) cages in 
+  let min_sum = List.fold_left (+) 0 (List.map (fun (_, (y, _)) -> y) extrem) in 
+  let max_sum = List.fold_left (+) 0 (List.map (fun (_, (_, z)) -> z) extrem) in
+  let rec get_new_available acc = function
+    | [] -> acc
+    | ((i, j), (min_v, max_v)) :: rest -> 
+      match state.current_grid.(i).(j) with
+      | Some _ -> get_new_available acc rest
+      | None -> 
+        let options = get_options (i, j) state.available in
+        let new_options = List.filter ((>)(sum - min_sum + min_v + 1)) (List.filter ((<)(sum - max_sum + max_v - 1)) options) in 
+        get_new_available ({loc = (i, j) ; possible = new_options} :: acc) rest
+  in 
+  let new_available = get_new_available [] extrem in 
+  let available = merge state.available new_available in 
+  {state with available = available}
+  
+
+let narrow_cages (state : state) : state =
+  let current_state = ref state in
+  let rec check = function
+  | [] -> !current_state
+  | cage :: rest -> 
+    current_state := check_cage !current_state cage;
+    check rest
+  in check state.cages
+  
 
 (*SOLVE PROBLEM*)
 let initialize_state (problem : Model.problem) : state =
@@ -230,8 +268,9 @@ let initialize_state (problem : Model.problem) : state =
   available = available; 
   just_added = None; 
   thermometers = problem.thermometers;
-  arrows = problem.arrows}
-  |> check_thermometers |> narrow_arrows
+  arrows = problem.arrows;
+  cages = problem.cages}
+  |> check_thermometers |> narrow_arrows |> narrow_cages
 
 let validate_state (state : state) : response =
   let unsolved =
@@ -246,7 +285,7 @@ let validate_state (state : state) : response =
 
 let insert_field (i, j) element (grid : 'a Model.grid) : 'a Model.grid =
   grid.(i).(j) <- Some element;
-  (*Printf.printf "%s" (Model.tuple_to_string string_of_int (i, j));*)
+  Printf.printf "%s" (Model.tuple_to_string string_of_int (i, j));
   grid
 
 let branch_state (state : state) : (state * state) option =
@@ -295,12 +334,14 @@ let narrow_options (state : state) : state = (* Izbrise stevke, ki niso vec na r
     let available' = correct_related [] state.available in
     let state = {state with available = available'; just_added = None} in 
     let thermo = List.length state.thermometers
-    and arrow = List.length state.arrows in 
-    match (thermo, arrow) with
-    |(0, 0) -> state
-    |(0, _) -> state |> check_thermometers
-    |(_, 0) -> state |> narrow_arrows
-    | _ -> state |> check_thermometers |> narrow_arrows
+    and arrow = List.length state.arrows 
+    and cages = List.length state.cages in 
+    match (thermo, arrow, cages) with
+    |(0, 0, 0) -> state
+    |(_, 0, 0) -> state |> check_thermometers
+    |(0, _, 0) -> state |> narrow_arrows
+    |(0, 0, _) -> state |> narrow_cages
+    | _ -> state |> check_thermometers |> narrow_arrows |> narrow_cages
 
 
     
@@ -308,7 +349,7 @@ let narrow_options (state : state) : state = (* Izbrise stevke, ki niso vec na r
 let rec solve_state (state : state) =
   (* uveljavimo trenutne omejitve in pogledamo, kam smo prišli *)
   (* TODO: na tej točki je stanje smiselno počistiti in zožiti možne rešitve *)
-  (*print_state state;*)
+  print_state state;
   let new_state = narrow_options state in
   match validate_state new_state with
   | Solved solution ->

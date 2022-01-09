@@ -134,7 +134,7 @@ let grid_of_string cell_of_char str =
     |> List.filter (fun x -> String.length x > 0 && x.[0] = 'K')
     |> List.map (fun x -> (String.sub x 3 (String.length x - 3)))
     |> List.map (fun x -> String.split_on_char ' ' x)
-    |> List.map (function | [i; y] -> (int_of_string i, String.split_on_char ';' y) | _ -> failwith "Neveljavna kletka")
+    |> List.map (function | [x; y] -> (int_of_string x, String.split_on_char ';' y) | _ -> failwith "Neveljavna kletka")
     |> List.map (fun (x, y) -> (x, List.map string_to_tuple y))
   in 
   (grid, termometri, puscice, kletke)
@@ -209,6 +209,20 @@ let is_valid_arrow grid ((x, y), tail) =
 let check_arrows arrows solution =
   List.fold_left (&&) true (List.map (is_valid_arrow solution) arrows)
 
+let all_unique list =
+  let sorted = List.sort compare list in 
+  let rec check = function
+    | [] -> true
+    | [x]-> true
+    | x :: y :: xs -> if x < y then check (y :: xs) else false
+  in check sorted
+
+let is_valid_cage grid (sum, fields) =
+  let values = List.map (fun (i, j) -> grid.(i).(j)) fields in
+  if (all_unique values) && (List.fold_left (+) 0 values = sum) then true else false
+
+let check_cages cages solution =
+  List.fold_left (&&) true (List.map (is_valid_cage solution) cages)
 
 let is_valid_solution problem solution = 
   let rows = rows solution 
@@ -217,6 +231,7 @@ let is_valid_solution problem solution =
 
   check_thermometers problem.thermometers solution &&
   check_arrows problem.arrows solution &&
+  check_cages problem.cages solution &&
   check_all rows && 
   check_all columns && 
   check_all boxes 

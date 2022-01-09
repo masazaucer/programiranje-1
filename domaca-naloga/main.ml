@@ -11,6 +11,13 @@ let find_solution problem =
   let elapsed_time = after -. before in
   (solution, elapsed_time)
 
+let find_solutions (problems : Model.problem list) =
+  let before = Sys.time () in
+  let _ = List.iter (fun x -> ignore (Solver.solve_problem x)) problems in
+  let after = Sys.time () in
+  let elapsed_time = after -. before in
+  Printf.printf "Čas reševanja: %f s.\n%!" elapsed_time
+
 let display_solution = function
   | Some solution ->
       Printf.printf "Končna rešitev:\n";
@@ -38,6 +45,7 @@ let () =
   |> List.map read_problem
   (* Probleme zaporedoma rešimo *)
   |> List.iter find_and_display_solution
+  (*|> find_solutions*)
 
 (* Če domačo nalogo rešujete prek spletnega vmesnika, ki ne podpira branja datotek,
    lahko delovanje preizkušate prek spodnjega programa. *)

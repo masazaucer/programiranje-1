@@ -162,17 +162,7 @@ type solution = int grid
 
 let print_solution (solution : solution) = print_grid string_of_int solution
 
-let rec is_valid_thermometer last_value grid remaining_thermometer =
-  match remaining_thermometer with
-  | [] -> true
-  | (i, j) :: xs -> 
-    let element = grid.(i).(j) in
-    if element > last_value then is_valid_thermometer element grid xs else false
-
-
-let rec check_thermometers thermometers solution = 
-  List.fold_left (&&) true (List.map (is_valid_thermometer 0 solution) thermometers)
-
+(*VALIDATE SOLUTION*)
 let check_part part = 
   let checked_cells = Array.init 9 (fun x -> Array.exists ((=) (x + 1)) part) in
   Array.for_all ((=) true) checked_cells
@@ -184,10 +174,33 @@ let check_all element =
     | x :: xs -> check ((check_part x) :: acc) xs
   in List.for_all ((=) true) (check [] element)
 
+let rec is_valid_thermometer last_value grid remaining_thermometer =
+  match remaining_thermometer with
+  | [] -> true
+  | (i, j) :: xs -> 
+    let element = grid.(i).(j) in
+    if element > last_value then is_valid_thermometer element grid xs else false
+
+let rec check_thermometers thermometers solution = 
+  List.fold_left (&&) true (List.map (is_valid_thermometer 0 solution) thermometers)
+
+let is_valid_arrow grid ((x, y), tail) =
+  let values = List.map (fun (i, j) -> grid.(i).(j)) tail in
+  let sum_values = List.fold_left (+) 0 values in
+  grid.(x).(y) = sum_values
+  
+let check_arrows arrows solution =
+  List.fold_left (&&) true (List.map (is_valid_arrow solution) arrows)
+
+
 let is_valid_solution problem solution = 
   let rows = rows solution 
   and columns = columns solution
   and boxes = boxes solution in
 
-  check_all rows && check_all columns && check_all boxes && check_thermometers problem.thermometers solution
+  check_all rows && 
+  check_all columns && 
+  check_all boxes && 
+  check_thermometers problem.thermometers solution &&
+  check_arrows problem.arrows solution
 

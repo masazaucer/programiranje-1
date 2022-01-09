@@ -6,7 +6,8 @@ type state = { problem : Model.problem;
               current_grid : int option Model.grid; 
               available : available list; 
               just_added : (int * int) option;
-              thermometers : (int * int) list list}
+              thermometers : (int * int) list list;
+              arrows : ((int * int) * (int * int) list) list}
 
 
 type response = Solved of Model.solution | Unsolved of state | Fail of state
@@ -66,7 +67,9 @@ let all_available grid = (* Naredi seznam vseh moznosti po poljih *)
 
 let get_options (i, j) available = (*vrne vse moznosti za mesto (i, j)*)
   let rec find = function
-    | [] -> failwith "Ni moznosti"
+    | [] -> 
+      (*Printf.printf "%s" (Model.tuple_to_string string_of_int (i, j));*)
+      failwith "Ni moznosti"
     | option :: rest -> 
       if option.loc = (i, j) then option.possible else find rest
   in find available
@@ -148,16 +151,84 @@ let rec check_thermometers (state : state) : state =
   let available = merge available new_available in
   {state with available = available}
   
+(*CHECK ARROWS*)
 
+(*izracuna najmanjso mozno vsoto polj v repu*)
+let rec minimum_of_tail acc state tail = 
+  match tail with
+  | [] -> acc
+  | (i, j) :: rest -> 
+    match state.current_grid.(i).(j) with
+    | Some x -> minimum_of_tail (acc + x) state rest
+    | None ->
+      let options = get_options (i, j) state.available in 
+      minimum_of_tail (acc + min 9 options) state rest
+
+
+(*poisce najvecjo mozno vrednost v glavi puscice*)
+let maximum_of_head state (x, y) = 
+  match state.current_grid.(x).(y) with
+  | Some x -> x
+  | None ->
+    let options = get_options (x, y) state.available in 
+    max 1 options
+
+
+(*pobrise vse moznosti pri glavi, ki so manjse od najmanjse mozne vsote repa*)
+let check_arrow_head ((x, y), tail) (state : state) : available list = 
+  match state.current_grid.(x).(y) with
+  | Some _ -> []
+  | None -> 
+    let min = minimum_of_tail 0 state tail in
+    let options = get_options (x, y) state.available in 
+    let new_options = List.filter ((<) min) options in
+    [{loc = (x, y); possible = new_options}]
+ 
+
+(*pobrise moznosti za vsako polje repa, ki so prevelike*)
+let check_arrow_tail ((x, y), tail) state =
+  let l = minimum_of_tail 0 state tail in 
+  let m = maximum_of_head state (x, y) in 
+  let max = m - l in 
+  let rec get_new_available acc = function
+    | [] -> acc
+    | (i, j) :: rest -> 
+      match state.current_grid.(i).(j) with
+      | Some _ -> get_new_available acc rest
+      | None -> 
+        let options = get_options (i, j) state.available in
+        let min = min 9 options in 
+        let new_options = List.filter ((>)(max + min + 1)) options in 
+        get_new_available ({loc = (i, j) ; possible = new_options} :: acc) rest
+  in 
+  get_new_available [] tail
+
+
+(*nove moznosti za vsa polja puscice zdruzi s stanjem*)
+let check_arrow (state : state) arrow : state=
+  let new_available = check_arrow_head arrow state @ check_arrow_tail arrow state in 
+  let available = merge state.available new_available in
+  {state with available = available}
+
+
+let narrow_arrows (state : state) : state =
+  let current_state = ref state in 
+  let rec check = function
+  | [] -> !current_state
+  | arrow :: rest -> 
+    current_state := check_arrow state arrow;
+    check rest
+  in check state.arrows
 
 let initialize_state (problem : Model.problem) : state =
   let available = List.filter_map (fun x -> x) (all_available problem.initial_grid) in
-  check_thermometers
   { current_grid = Model.copy_grid problem.initial_grid; 
   problem ; 
   available = available; 
   just_added = None; 
-  thermometers = problem.thermometers}
+  thermometers = problem.thermometers;
+  arrows = problem.arrows}
+  |> check_thermometers |> narrow_arrows
 
 let validate_state (state : state) : response =
   let unsolved =
@@ -172,6 +243,7 @@ let validate_state (state : state) : response =
 
 let insert_field (i, j) element (grid : 'a Model.grid) : 'a Model.grid =
   grid.(i).(j) <- Some element;
+  (*Printf.printf "%s" (Model.tuple_to_string string_of_int (i, j));*)
   grid
 
 let branch_state (state : state) : (state * state) option =
@@ -203,7 +275,7 @@ let rec filter (acc : int list) (el : int) = function
 let narrow_options (state : state) : state = (* Izbrise stevke, ki niso vec na razpolago na dolocenem polju *)
   match state.just_added with
   | None -> 
-    check_thermometers state
+    state |> check_thermometers |> narrow_arrows
   | Some (i, j) -> 
     let el = Option.get state.current_grid.(i).(j) in
     let rec correct_related acc l =
@@ -218,9 +290,15 @@ let narrow_options (state : state) : state = (* Izbrise stevke, ki niso vec na r
           correct_related (option :: acc) rest
     in
     let available' = correct_related [] state.available in
-    if List.length state.thermometers > 0 then 
-      check_thermometers {state with available = available'; just_added = None}
-    else {state with available = available'; just_added = None}
+    let state = {state with available = available'; just_added = None} in 
+    let thermo = List.length state.thermometers
+    and arrow = List.length state.arrows in 
+    match (thermo, arrow) with
+    |(0, 0) -> state
+    |(0, _) -> state |> check_thermometers
+    |(_, 0) -> state |> narrow_arrows
+    | _ -> state |> check_thermometers |> narrow_arrows
+
 
     
 (* pogledamo, če trenutno stanje vodi do rešitve *)

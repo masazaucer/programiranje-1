@@ -357,7 +357,7 @@ let narrow_options (state : state) : state =
     |(_, 0, 0) -> state |> check_thermometers
     |(0, _, 0) -> state |> narrow_arrows
     |(0, 0, _) -> state |> narrow_cages
-    | _ -> failwith "Prevec pogojev"
+    | _ -> state |> check_thermometers |> narrow_arrows |> narrow_cages
 
 
     

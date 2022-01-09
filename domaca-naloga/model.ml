@@ -124,14 +124,14 @@ let grid_of_string cell_of_char str =
 
 (* Model za vhodne probleme *)
 
-type problem = { initial_grid : int option grid ; termometri : (int * int) list list}
+type problem = { initial_grid : int option grid ; thermometers : (int * int) list list}
 
 let print_problem problem : unit = 
   let string_of_cell = function
     | None -> "?"
     | Some i -> string_of_int i
   in print_grid string_of_cell problem.initial_grid;
-  Printf.printf "%s" (string_of_nested_list (tuple_to_string string_of_int) ";" "\n" problem.termometri)
+  Printf.printf "%s" (string_of_nested_list (tuple_to_string string_of_int) ";" "\n" problem.thermometers)
     
 
 let problem_of_string str =
@@ -140,8 +140,8 @@ let problem_of_string str =
     | c when '1' <= c && c <= '9' -> Some (Some (Char.code c - Char.code '0'))
     | _ -> None
   in
-  let (grid, termometri) = grid_of_string cell_of_char str in
-  { initial_grid = grid; termometri = termometri }
+  let (grid, thermometers) = grid_of_string cell_of_char str in
+  { initial_grid = grid; thermometers = thermometers }
 
 (* Model za izhodne rešitve *)
 
@@ -149,19 +149,32 @@ type solution = int grid
 
 let print_solution (solution : solution) = print_grid string_of_int solution
 
+let rec is_valid_thermometer last_value grid remaining_thermometer =
+  match remaining_thermometer with
+  | [] -> true
+  | (i, j) :: xs -> 
+    let element = grid.(i).(j) in
+    if element > last_value then is_valid_thermometer element grid xs else false
+
+
+let rec check_thermometers thermometers solution = 
+  List.fold_left (&&) true (List.map (is_valid_thermometer 0 solution) thermometers)
+
+let check_part part = 
+  let checked_cells = Array.init 9 (fun x -> Array.exists ((=) (x + 1)) part) in
+  Array.for_all ((=) true) checked_cells
+
+let check_all element =
+  let rec check acc element = 
+    match element with
+    | [] -> acc
+    | x :: xs -> check ((check_part x) :: acc) xs
+  in List.for_all ((=) true) (check [] element)
+
 let is_valid_solution problem solution = 
-  let check_part part = 
-    let checked_cells = Array.init 9 (fun x -> Array.exists ((=) (x + 1)) part) in
-    Array.for_all ((=) true) checked_cells
-  in
-  let check_all element =
-    let rec check acc element= match element with
-      | [] -> acc
-      | x :: xs -> check ((check_part x) :: acc) xs
-    in List.for_all ((=) true) (check [] element)
-  in
   let rows = rows solution 
   and columns = columns solution
   and boxes = boxes solution in
-  check_all rows && check_all columns && check_all boxes
+
+  check_all rows && check_all columns && check_all boxes && check_thermometers problem.thermometers solution
 

@@ -104,7 +104,7 @@ let tuple_to_string string_of_element (x, y) = "(" ^ string_of_element x ^ "," ^
 let grid_of_string cell_of_char str =
   let grid =
     str |> String.split_on_char '\n'
-    |> List.filter (fun x -> String.length x > 0 && x.[0] <> 'T' && x.[0] <> '#')
+    |> List.filter (fun x -> String.length x > 0 && x.[0] <> 'T' && x.[0] <> 'A' && x.[0] <> '#')
     |> List.map (row_of_string cell_of_char)
     |> List.filter (function [] -> false | _ -> true) (*ne rabimo vec?*)
     |> List.map Array.of_list |> Array.of_list
@@ -120,18 +120,31 @@ let grid_of_string cell_of_char str =
     |> List.map ((String.split_on_char ';'))
     |> List.map (List.map (fun x -> string_to_tuple x))
   in
-  (grid, termometri)
+  let puscice =
+    str
+    |> String.split_on_char '\n'
+    |> List.filter (fun x -> String.length x > 0 && x.[0] = 'A')
+    |> List.map (fun x -> (String.sub x 3 5, String.sub x 12 (String.length x - 12)))
+    |> List.map (fun (x, y) -> (x, String.split_on_char ';' y))
+    |> List.map (fun (head, tail) -> (string_to_tuple head, List.map string_to_tuple tail))
+  in
+  (grid, termometri, puscice)
 
 (* Model za vhodne probleme *)
 
-type problem = { initial_grid : int option grid ; thermometers : (int * int) list list}
+type problem = { initial_grid : int option grid ; thermometers : (int * int) list list ; arrows : ((int * int) * (int * int) list) list}
+
+let arrow_to_string string_of_element arrow =
+  let (head, tail) = arrow in
+  (tuple_to_string string_of_element head) ^ " -> " ^ string_of_list (tuple_to_string string_of_element) ";" tail
 
 let print_problem problem : unit = 
   let string_of_cell = function
     | None -> "?"
     | Some i -> string_of_int i
   in print_grid string_of_cell problem.initial_grid;
-  Printf.printf "%s" (string_of_nested_list (tuple_to_string string_of_int) ";" "\n" problem.thermometers)
+  Printf.printf "%s" (string_of_nested_list (tuple_to_string string_of_int) ";" "\n" problem.thermometers);
+  Printf.printf "%s" (string_of_list (arrow_to_string string_of_int) "\n" problem.arrows)
     
 
 let problem_of_string str =
@@ -140,8 +153,8 @@ let problem_of_string str =
     | c when '1' <= c && c <= '9' -> Some (Some (Char.code c - Char.code '0'))
     | _ -> None
   in
-  let (grid, thermometers) = grid_of_string cell_of_char str in
-  { initial_grid = grid; thermometers = thermometers }
+  let (grid, thermometers, arrows) = grid_of_string cell_of_char str in
+  { initial_grid = grid; thermometers = thermometers ; arrows = arrows}
 
 (* Model za izhodne rešitve *)
 

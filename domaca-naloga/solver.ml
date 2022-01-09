@@ -154,24 +154,24 @@ let rec check_thermometers (state : state) : state =
 (*CHECK ARROWS*)
 
 (*izracuna najmanjso mozno vsoto polj v repu*)
-let rec minimum_of_tail acc state tail = 
+let rec min_max_of_tail acc1 acc2 state tail = 
   match tail with
-  | [] -> acc
+  | [] -> (acc1, acc2)
   | (i, j) :: rest -> 
     match state.current_grid.(i).(j) with
-    | Some x -> minimum_of_tail (acc + x) state rest
+    | Some x -> min_max_of_tail (acc1 + x) (acc2 + x) state rest
     | None ->
       let options = get_options (i, j) state.available in 
-      minimum_of_tail (acc + min 9 options) state rest
+      min_max_of_tail (acc1 + min 9 options) (acc2 + max 1 options) state rest
 
 
 (*poisce najvecjo mozno vrednost v glavi puscice*)
-let maximum_of_head state (x, y) = 
+let min_max_of_head state (x, y) = 
   match state.current_grid.(x).(y) with
-  | Some x -> x
+  | Some x -> (x, x)
   | None ->
     let options = get_options (x, y) state.available in 
-    max 1 options
+    (min 9 options, max 1 options)
 
 
 (*pobrise vse moznosti pri glavi, ki so manjse od najmanjse mozne vsote repa*)
@@ -179,17 +179,18 @@ let check_arrow_head ((x, y), tail) (state : state) : available list =
   match state.current_grid.(x).(y) with
   | Some _ -> []
   | None -> 
-    let min = minimum_of_tail 0 state tail in
+    let (min, max) = min_max_of_tail 0 0 state tail in
     let options = get_options (x, y) state.available in 
-    let new_options = List.filter ((<) min) options in
+    let new_options = List.filter ((>)max) (List.filter ((<) min) options) in
     [{loc = (x, y); possible = new_options}]
  
 
 (*pobrise moznosti za vsako polje repa, ki so prevelike*)
 let check_arrow_tail ((x, y), tail) state =
-  let l = minimum_of_tail 0 state tail in 
-  let m = maximum_of_head state (x, y) in 
-  let max = m - l in 
+  let (min_t, max_t) = min_max_of_tail 0 0 state tail in 
+  let (min_h, max_h) = min_max_of_head state (x, y) in 
+  let max_v = max_h - min_t in 
+  let min_v = min_h - max_t in
   let rec get_new_available acc = function
     | [] -> acc
     | (i, j) :: rest -> 
@@ -198,7 +199,8 @@ let check_arrow_tail ((x, y), tail) state =
       | None -> 
         let options = get_options (i, j) state.available in
         let min = min 9 options in 
-        let new_options = List.filter ((>)(max + min + 1)) options in 
+        let max = max 1 options in
+        let new_options = List.filter ((<)(min_v + max - 1)) (List.filter ((>)(max_v + min + 1)) options) in 
         get_new_available ({loc = (i, j) ; possible = new_options} :: acc) rest
   in 
   get_new_available [] tail
@@ -210,7 +212,6 @@ let check_arrow (state : state) arrow : state=
   let available = merge state.available new_available in
   {state with available = available}
 
-
 let narrow_arrows (state : state) : state =
   let current_state = ref state in 
   let rec check = function
@@ -220,6 +221,8 @@ let narrow_arrows (state : state) : state =
     check rest
   in check state.arrows
 
+
+(*SOLVE PROBLEM*)
 let initialize_state (problem : Model.problem) : state =
   let available = List.filter_map (fun x -> x) (all_available problem.initial_grid) in
   { current_grid = Model.copy_grid problem.initial_grid; 

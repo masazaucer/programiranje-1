@@ -283,16 +283,14 @@ let narrow_cages (state : state) : state =
 (*SOLVE PROBLEM*)
 let initialize_state (problem : Model.problem) : state =
   let available = List.filter_map (fun x -> x) (all_available problem.initial_grid) in
-  let state = { current_grid = Model.copy_grid problem.initial_grid; 
+  { current_grid = Model.copy_grid problem.initial_grid; 
   problem ; 
   available = available; 
   just_added = None; 
   thermometers = problem.thermometers;
   arrows = problem.arrows;
   cages = problem.cages}
-  |> check_thermometers |> narrow_arrows |> narrow_cages in 
-  print_state state;
-  state
+  |> check_thermometers |> narrow_arrows |> narrow_cages
 
 let validate_state (state : state) : response =
   let unsolved =

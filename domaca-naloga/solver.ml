@@ -8,15 +8,17 @@ type state = { problem : Model.problem;
               just_added : (int * int) option;
               thermometers : (int * int) list list}
 
-let string_of_element (element : available) =
+
+type response = Solved of Model.solution | Unsolved of state | Fail of state
+
+(*Funkcije za prikaz vmesnih stanj*)
+let string_of_option (element : available) =
   let (x, y) = element.loc in
   let possible = element.possible in
   (string_of_int x) ^ "," ^ (string_of_int y) ^ ":" ^ (Model.string_of_list string_of_int "," possible) (*string_of_tuple*)
 
 let string_of_available available_list =
-  Model.string_of_list string_of_element "\n" available_list
-
-
+  Model.string_of_list string_of_option "\n" available_list
 
 let print_state (state : state) : unit =
   Model.print_grid
@@ -24,11 +26,8 @@ let print_state (state : state) : unit =
     state.current_grid;
   Printf.printf "%s" (string_of_available state.available)
 
-
-type response = Solved of Model.solution | Unsolved of state | Fail of state
-
-(* Analiza vseh moznosti za vsako polje *)
-let get_elements_of_element element = (* Pobere vse vrednosti iz vrstice/stolpca/boxa *)
+(* INITIAL OPTIONS *)
+let get_digits_of_row_column_box element = (* Pobere vse vrednosti iz vrstice/stolpca/boxa *)
   let list_of_element = Array.to_list element in
   let rec filter acc l =
     match l with
@@ -36,11 +35,11 @@ let get_elements_of_element element = (* Pobere vse vrednosti iz vrstice/stolpca
     | x :: xs -> if Option.is_some x then filter ((Option.get x) :: acc) xs else filter acc xs
   in filter [] list_of_element
 
-let all_elements_for_element list = (* Pobere vse vrednosti za vsako vrstico/stolpec/box *)
+let all_digits_for_rows_columns_boxes list = (* Pobere vse vrednosti za vsako vrstico/stolpec/box *)
   let rec aux acc l =
     match l with
     | [] -> acc 
-    | x :: xs -> aux (Array.append acc [|get_elements_of_element x|]) xs
+    | x :: xs -> aux (Array.append acc [|get_digits_of_row_column_box x|]) xs
   in aux [||] list
 
 let all_possibilities possibilities_row possibilities_column possibilities_box = (* Poisce vse stevke, ki jih se ni v dani vrstici, stolpcu in boxu *)
@@ -53,9 +52,9 @@ let all_possibilities possibilities_row possibilities_column possibilities_box =
   in filter [] digits
 
 let all_available grid = (* Naredi seznam vseh moznosti po poljih *)
-  let available_rows = all_elements_for_element (Model.rows grid) 
-  and available_columns = all_elements_for_element (Model.columns grid)
-  and available_boxes = all_elements_for_element (Model.boxes grid) in
+  let available_rows = all_digits_for_rows_columns_boxes (Model.rows grid) 
+  and available_columns = all_digits_for_rows_columns_boxes (Model.columns grid)
+  and available_boxes = all_digits_for_rows_columns_boxes (Model.boxes grid) in
   List.flatten (List.init 9 (fun i -> List.init 9 (fun j -> 
     if Option.is_some grid.(i).(j) then None else 
       let possible = all_possibilities available_rows.(i) available_columns.(j) available_boxes.(3 * (i / 3) + (j / 3)) in
@@ -67,14 +66,10 @@ let all_available grid = (* Naredi seznam vseh moznosti po poljih *)
 
 let get_options (i, j) available = (*vrne vse moznosti za mesto (i, j)*)
   let rec find = function
-    | [] -> 
-      Printf.printf "%s" ("(" ^ string_of_int i ^ "," ^ string_of_int j ^ ")");
-      
-      failwith "Ni moznosti"
+    | [] -> failwith "Ni moznosti"
     | option :: rest -> 
       if option.loc = (i, j) then option.possible else find rest
   in find available
-
 
 let rec min current_min = function (*vrne minimum int lista*)
   | [] -> current_min
@@ -175,12 +170,9 @@ let validate_state (state : state) : response =
     if Model.is_valid_solution state.problem solution then Solved solution
     else Fail state
 
-let insert_field (i, j) element (grid : 'a Model.grid) : 'a Model.grid = 
-  let map_row x = Array.init 9 (fun y -> if (x, y) = (i, j) then Some element else grid.(x).(y))
-  in 
-  Printf.printf "%s" ("(" ^ string_of_int i ^ "," ^ string_of_int j ^ ")");
-  Array.init 9 map_row
-
+let insert_field (i, j) element (grid : 'a Model.grid) : 'a Model.grid =
+  grid.(i).(j) <- Some element;
+  grid
 
 let branch_state (state : state) : (state * state) option =
   (* TODO: Pripravite funkcijo, ki v trenutnem stanju poišče hipotezo, glede katere
@@ -226,14 +218,16 @@ let narrow_options (state : state) : state = (* Izbrise stevke, ki niso vec na r
           correct_related (option :: acc) rest
     in
     let available' = correct_related [] state.available in
-    check_thermometers {state with available = available'; just_added = None}
+    if List.length state.thermometers > 0 then 
+      check_thermometers {state with available = available'; just_added = None}
+    else {state with available = available'; just_added = None}
 
     
 (* pogledamo, če trenutno stanje vodi do rešitve *)
 let rec solve_state (state : state) =
   (* uveljavimo trenutne omejitve in pogledamo, kam smo prišli *)
   (* TODO: na tej točki je stanje smiselno počistiti in zožiti možne rešitve *)
-  print_state state;
+  (*print_state state;*)
   let new_state = narrow_options state in
   match validate_state new_state with
   | Solved solution ->

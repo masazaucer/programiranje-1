@@ -17,7 +17,7 @@ type response = Solved of Model.solution | Unsolved of state | Fail of state
 let string_of_option (element : available) =
   let (x, y) = element.loc in
   let possible = element.possible in
-  (string_of_int x) ^ "," ^ (string_of_int y) ^ ":" ^ (Model.string_of_list string_of_int "," possible) (*string_of_tuple*)
+  Model.tuple_to_string string_of_int (x, y) ^ ":" ^ (Model.string_of_list string_of_int "," possible)
 
 let string_of_available available_list =
   Model.string_of_list string_of_option "\n" available_list
@@ -29,7 +29,9 @@ let print_state (state : state) : unit =
   Printf.printf "%s" (string_of_available state.available)
 
 (* INITIAL OPTIONS *)
-let get_digits_of_row_column_box element = (* Pobere vse vrednosti iz vrstice/stolpca/boxa *)
+
+(* Pobere vse vrednosti iz vrstice/stolpca/boxa *)
+let get_digits_of_row_column_box element = 
   let list_of_element = Array.to_list element in
   let rec filter acc l =
     match l with
@@ -37,14 +39,16 @@ let get_digits_of_row_column_box element = (* Pobere vse vrednosti iz vrstice/st
     | x :: xs -> if Option.is_some x then filter ((Option.get x) :: acc) xs else filter acc xs
   in filter [] list_of_element
 
-let all_digits_for_rows_columns_boxes list = (* Pobere vse vrednosti za vsako vrstico/stolpec/box *)
+(* Pobere vse vrednosti za vsako vrstico/stolpec/box *)
+let all_digits_for_rows_columns_boxes list = 
   let rec aux acc l =
     match l with
     | [] -> acc 
     | x :: xs -> aux (Array.append acc [|get_digits_of_row_column_box x|]) xs
   in aux [||] list
 
-let all_possibilities possibilities_row possibilities_column possibilities_box = (* Poisce vse stevke, ki jih se ni v dani vrstici, stolpcu in boxu *)
+(* Poisce vse stevke, ki jih se ni v dani vrstici, stolpcu in boxu *)
+let all_possibilities possibilities_row possibilities_column possibilities_box = 
   let list = List.concat [possibilities_row; possibilities_column; possibilities_box] in
   let digits = List.init 9 (fun x -> x + 1) in
   let rec filter acc l =
@@ -53,7 +57,8 @@ let all_possibilities possibilities_row possibilities_column possibilities_box =
     | x :: xs -> if List.exists ((=) x) list then filter acc xs else filter (x :: acc) xs
   in filter [] digits
 
-let all_available grid = (* Naredi seznam vseh moznosti po poljih *)
+(* Naredi seznam vseh moznosti po poljih *)
+let all_available grid = 
   let available_rows = all_digits_for_rows_columns_boxes (Model.rows grid) 
   and available_columns = all_digits_for_rows_columns_boxes (Model.columns grid)
   and available_boxes = all_digits_for_rows_columns_boxes (Model.boxes grid) in
@@ -66,7 +71,8 @@ let all_available grid = (* Naredi seznam vseh moznosti po poljih *)
 
 (*CHECK THERMOMETERS*)
 
-let get_options (i, j) available = (*vrne vse moznosti za mesto (i, j)*)
+(*vrne vse moznosti za mesto (i, j)*)
+let get_options (i, j) available = 
   let rec find = function
     | [] -> 
       (*Printf.printf "%s" (Model.tuple_to_string string_of_int (i, j));*)
@@ -75,17 +81,20 @@ let get_options (i, j) available = (*vrne vse moznosti za mesto (i, j)*)
       if option.loc = (i, j) then option.possible else find rest
   in find available
 
-let rec min current_min = function (*vrne minimum int lista*)
+(*vrne minimum int lista*)
+let rec min current_min = function 
   | [] -> current_min
   | x :: xs -> 
     if x < current_min then min x xs else min current_min xs
 
-let rec max current_max = function (*vrne maximum int lista*)
+(*vrne maximum int lista*)
+let rec max current_max = function 
   | [] -> current_max
   | x :: xs -> 
     if x > current_max then max x xs else max current_max xs
 
-let rec check_thermometer acc m direction available grid thermometer = (*direction = true -> minimum | false -> maximum*)
+(*direction = true -> minimum | false -> maximum*)
+let rec check_thermometer acc m direction available grid thermometer = 
   match thermometer with
   | [] ->  acc
   | (i, j) :: rest -> 
@@ -97,6 +106,7 @@ let rec check_thermometer acc m direction available grid thermometer = (*directi
       check_thermometer ({loc = (i, j); possible = new_options} :: acc) (if direction then min 9 new_options else max 1 new_options) direction available grid rest
 
 
+(*zamenja moznosti za element (i, j) z novimi*)
 let rec switch_el acc available option =
   match available with
   | [] -> failwith "Ne obstaja!"
@@ -107,6 +117,7 @@ let rec switch_el acc available option =
       switch_el (a :: acc) rest option
 
 
+(*vse moznosti iz seznama new_available vsavi namesto starih*)
 let rec merge available new_available = 
   let rec switch available new_available =
     match new_available with 
@@ -115,12 +126,14 @@ let rec merge available new_available =
   in 
   switch available new_available
 
-let cross_section (list1 : int list) (list2 : int list) : int list =
+(*presek dveh int listov*)
+  let cross_section (list1 : int list) (list2 : int list) : int list =
   let rec aux acc =function
   | [] -> acc
   | x :: xs -> if List.exists (fun y -> x = y) list2 then aux (x :: acc) xs else aux acc xs
   in aux [] list1
 
+(*zdruzi dva lista moznosti: pri tistih ki so v obeh vzame presek poznosti za tisto polje*)
 let combine (available' : available list) (available'' : available list) : available list =
   let rec aux acc = function 
     | [] -> acc
@@ -142,7 +155,7 @@ let combine (available' : available list) (available'' : available list) : avail
   in
   get_rest (aux [] available') available''
 
-
+(*izrecuna novo stanje kjer uposteva vse termometre*)
 let rec check_thermometers (state : state) : state = 
   let available = state.available in
   let thermometers = state.thermometers in
@@ -216,6 +229,7 @@ let check_arrow (state : state) arrow : state=
   (*Printf.printf "%s" ("merged available\n" ^ string_of_available available');*)
   {state with available = available'}
 
+(*izracuna novo stanje upostevajoc vse puscice*)
 let narrow_arrows (state : state) : state =
   let current_state = ref state in 
   let rec check = function
@@ -313,16 +327,12 @@ let branch_state (state : state) : (state * state) option =
         let (i, j) = option.loc in
         let other_options = {loc=(i, j); possible=other} :: rest in
         Some (
-          {state with current_grid=insert_field (i, j) opt1 state.current_grid; available=rest; just_added = Some (i, j)}, (* Je treba kopirati? *)
+          {state with current_grid=insert_field (i, j) opt1 state.current_grid; available=rest; just_added = Some (i, j)},
           {state with current_grid=Model.copy_grid state.current_grid; available=other_options; just_added = None}
         )
 
-let rec filter (acc : int list) (el : int) = function
-  | [] -> acc
-  | x :: xs -> if x = el then filter acc el xs else filter (x :: acc) el xs
-
-
-let narrow_options (state : state) : state = (* Izbrise stevke, ki niso vec na razpolago na dolocenem polju *)
+(* Izbrise stevke, ki niso vec na razpolago na dolocenem polju *)
+let narrow_options (state : state) : state = 
   match state.just_added with
   | None -> 
     state |> check_thermometers |> narrow_arrows
@@ -334,7 +344,7 @@ let narrow_options (state : state) : state = (* Izbrise stevke, ki niso vec na r
       | option :: rest -> 
         let (x, y) = option.loc in
         if x = i || y = j || (((x / 3) = (i / 3)) && ((y / 3) = (j / 3))) then 
-          let possible  = filter [] el option.possible in
+          let possible  = List.filter ((<>)el) option.possible in
           correct_related ({loc=(x, y); possible=possible} :: acc) rest
         else
           correct_related (option :: acc) rest

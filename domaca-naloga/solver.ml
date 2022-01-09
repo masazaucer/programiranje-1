@@ -152,6 +152,7 @@ let rec check_thermometers (state : state) : state =
   let available = merge available new_available in
   {state with available = available}
   
+
 (*CHECK ARROWS*)
 
 (*izracuna najmanjso mozno vsoto polj v repu*)
@@ -209,9 +210,11 @@ let check_arrow_tail ((x, y), tail) state =
 
 (*nove moznosti za vsa polja puscice zdruzi s stanjem*)
 let check_arrow (state : state) arrow : state=
-  let new_available = check_arrow_head arrow state @ check_arrow_tail arrow state in 
-  let available = merge state.available new_available in
-  {state with available = available}
+  let new_available = (check_arrow_head arrow state) @ (check_arrow_tail arrow state) in 
+  (*Printf.printf "%s" ("new available\n" ^ string_of_available new_available);*)
+  let available' = merge state.available new_available in
+  (*Printf.printf "%s" ("merged available\n" ^ string_of_available available');*)
+  {state with available = available'}
 
 let narrow_arrows (state : state) : state =
   let current_state = ref state in 
@@ -224,6 +227,7 @@ let narrow_arrows (state : state) : state =
 
 (*CHECK CAGES*)
 
+(*vrne najmanjso in najvecjo mozno vrednost polja (i, j)*)
 let min_max (x, y) state =
   match state.current_grid.(x).(y) with
   | Some x -> (x, x)
@@ -231,6 +235,7 @@ let min_max (x, y) state =
     let options = get_options (x, y) state.available in 
     (min 9 options, max 1 options)
 
+(*vrne stanje s spremenjenim seznamom available*)
 let check_cage state (sum, cages) =
   let extrem = List.map (fun (x, y) -> ((x, y), min_max (x, y) state)) cages in 
   let min_sum = List.fold_left (+) 0 (List.map (fun (_, (y, _)) -> y) extrem) in 
@@ -250,6 +255,7 @@ let check_cage state (sum, cages) =
   {state with available = available}
   
 
+(*zoza moznosti upostevajoc vse kletke*)
 let narrow_cages (state : state) : state =
   let current_state = ref state in
   let rec check = function
@@ -263,14 +269,16 @@ let narrow_cages (state : state) : state =
 (*SOLVE PROBLEM*)
 let initialize_state (problem : Model.problem) : state =
   let available = List.filter_map (fun x -> x) (all_available problem.initial_grid) in
-  { current_grid = Model.copy_grid problem.initial_grid; 
+  let state = { current_grid = Model.copy_grid problem.initial_grid; 
   problem ; 
   available = available; 
   just_added = None; 
   thermometers = problem.thermometers;
   arrows = problem.arrows;
   cages = problem.cages}
-  |> check_thermometers |> narrow_arrows |> narrow_cages
+  |> check_thermometers |> narrow_arrows |> narrow_cages in 
+  print_state state;
+  state
 
 let validate_state (state : state) : response =
   let unsolved =
@@ -285,7 +293,7 @@ let validate_state (state : state) : response =
 
 let insert_field (i, j) element (grid : 'a Model.grid) : 'a Model.grid =
   grid.(i).(j) <- Some element;
-  Printf.printf "%s" (Model.tuple_to_string string_of_int (i, j));
+  (*Printf.printf "%s" (Model.tuple_to_string string_of_int (i, j));*)
   grid
 
 let branch_state (state : state) : (state * state) option =
@@ -341,7 +349,7 @@ let narrow_options (state : state) : state = (* Izbrise stevke, ki niso vec na r
     |(_, 0, 0) -> state |> check_thermometers
     |(0, _, 0) -> state |> narrow_arrows
     |(0, 0, _) -> state |> narrow_cages
-    | _ -> state |> check_thermometers |> narrow_arrows |> narrow_cages
+    | _ -> failwith "Prevec pogojev"
 
 
     
@@ -349,8 +357,11 @@ let narrow_options (state : state) : state = (* Izbrise stevke, ki niso vec na r
 let rec solve_state (state : state) =
   (* uveljavimo trenutne omejitve in pogledamo, kam smo prišli *)
   (* TODO: na tej točki je stanje smiselno počistiti in zožiti možne rešitve *)
-  print_state state;
+  
   let new_state = narrow_options state in
+  (*print_state state;
+  Printf.printf "%s" "\n Novo stanje :\n";
+  print_state new_state;*)
   match validate_state new_state with
   | Solved solution ->
       (* če smo našli rešitev, končamo *)

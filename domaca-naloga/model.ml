@@ -104,7 +104,7 @@ let tuple_to_string string_of_element (x, y) = "(" ^ string_of_element x ^ "," ^
 let grid_of_string cell_of_char str =
   let grid =
     str |> String.split_on_char '\n'
-    |> List.filter (fun x -> String.length x > 0 && x.[0] <> 'T' && x.[0] <> 'A' && x.[0] <> '#')
+    |> List.filter (fun x -> String.length x > 0 && x.[0] <> 'T' && x.[0] <> 'A' && x.[0] <> 'K' && x.[0] <> '#')
     |> List.map (row_of_string cell_of_char)
     |> List.filter (function [] -> false | _ -> true) (*ne rabimo vec?*)
     |> List.map Array.of_list |> Array.of_list
@@ -128,15 +128,31 @@ let grid_of_string cell_of_char str =
     |> List.map (fun (x, y) -> (x, String.split_on_char ';' y))
     |> List.map (fun (head, tail) -> (string_to_tuple head, List.map string_to_tuple tail))
   in
-  (grid, termometri, puscice)
+  let kletke =
+    str
+    |> String.split_on_char '\n'
+    |> List.filter (fun x -> String.length x > 0 && x.[0] = 'K')
+    |> List.map (fun x -> (String.sub x 3 (String.length x - 3)))
+    |> List.map (fun x -> String.split_on_char ' ' x)
+    |> List.map (function | [i; y] -> (int_of_string i, String.split_on_char ';' y) | _ -> failwith "Neveljavna kletka")
+    |> List.map (fun (x, y) -> (x, List.map string_to_tuple y))
+  in 
+  (grid, termometri, puscice, kletke)
 
 (* Model za vhodne probleme *)
 
-type problem = { initial_grid : int option grid ; thermometers : (int * int) list list ; arrows : ((int * int) * (int * int) list) list}
+type problem = { initial_grid : int option grid ; 
+                thermometers : (int * int) list list ; 
+                arrows : ((int * int) * (int * int) list) list;
+                cages : (int * (int * int) list) list}
 
-let arrow_to_string string_of_element arrow =
+let string_of_arrow string_of_element arrow =
   let (head, tail) = arrow in
   (tuple_to_string string_of_element head) ^ " -> " ^ string_of_list (tuple_to_string string_of_element) ";" tail
+
+let string_of_cage string_of_element (sum, cage) =
+  string_of_int sum ^ ":" ^ string_of_list (tuple_to_string string_of_element) ";" cage
+
 
 let print_problem problem : unit = 
   let string_of_cell = function
@@ -144,7 +160,8 @@ let print_problem problem : unit =
     | Some i -> string_of_int i
   in print_grid string_of_cell problem.initial_grid;
   Printf.printf "%s" (string_of_nested_list (tuple_to_string string_of_int) ";" "\n" problem.thermometers);
-  Printf.printf "%s" (string_of_list (arrow_to_string string_of_int) "\n" problem.arrows)
+  Printf.printf "%s" (string_of_list (string_of_arrow string_of_int) "\n" problem.arrows);
+  Printf.printf "%s" (string_of_list (string_of_cage string_of_int) "\n" problem.cages)
     
 
 let problem_of_string str =
@@ -153,8 +170,8 @@ let problem_of_string str =
     | c when '1' <= c && c <= '9' -> Some (Some (Char.code c - Char.code '0'))
     | _ -> None
   in
-  let (grid, thermometers, arrows) = grid_of_string cell_of_char str in
-  { initial_grid = grid; thermometers = thermometers ; arrows = arrows}
+  let (grid, thermometers, arrows, cages) = grid_of_string cell_of_char str in
+  { initial_grid = grid; thermometers = thermometers ; arrows = arrows; cages = cages}
 
 (* Model za izhodne rešitve *)
 
@@ -198,9 +215,9 @@ let is_valid_solution problem solution =
   and columns = columns solution
   and boxes = boxes solution in
 
+  check_thermometers problem.thermometers solution &&
+  check_arrows problem.arrows solution &&
   check_all rows && 
   check_all columns && 
-  check_all boxes && 
-  check_thermometers problem.thermometers solution &&
-  check_arrows problem.arrows solution
+  check_all boxes 
 
